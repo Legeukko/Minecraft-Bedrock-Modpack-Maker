@@ -1,0 +1,77 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.attack.items.hand1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.21,
+			"bones": {
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-202.5, -2.5, -17.5],
+						"0.1304": [-210, -2.5, -17.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-5, 0, 0],
+						"0.1304": [-17.5, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [-12.5, 5, -27.5],
+						"0.1304": [-25, 5, -27.5]
+					}
+				},
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, 7.5, 0],
+						"0.1304": [0, 20, 0]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-20, 0, 0],
+						"0.1304": [-30, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.attack.items.hand2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-15, -2.5, -17.5],
+						"0.1304": [-2.5, -2.5, -17.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-12.5, 0, 0],
+						"0.1304": [-2.5, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [15, 10, -15],
+						"0.1304": [25, 10, -15]
+					}
+				},
+				"Kbody": {
+					"rotation": {
+						"0.0": ["query.target_x_rotation * 0.3", -2.5, 0],
+						"0.1304": ["query.target_x_rotation * 0.3", -15, 0]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-12.5, 0, 0],
+						"0.1304": [-2.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

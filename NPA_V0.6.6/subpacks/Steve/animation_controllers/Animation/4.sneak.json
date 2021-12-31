@@ -1,0 +1,450 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.sneak": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak",
+						{
+						"cn.sneak": "!variable.t && !variable.bow && !variable.shield_main"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.ssb": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_items_body_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.ssb"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "!variable.sneak_items_body_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.ssl": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_items_legs_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.ssl"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "!variable.sneak_items_legs_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.move": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_move_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.move",
+						{
+						"cn.sneak.move": "!variable.t && !variable.bow && !variable.shield_main"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_move_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.move.c": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_move_c_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.move.c"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_move_c_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.sq": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.sneak_sword_q_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.sq"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_sword_q_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.sz": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.sneak_sword_z_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.sz"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_sword_z_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.st": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.sneak_sword_trident_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.sz"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_sword_trident_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.move.sq": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_sword_q_move_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.move.sq"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_sword_q_move_npa"
+						}
+					]
+				}
+			}
+		},
+			"controller.animation.player.sneak.move.sz": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_sword_z_move_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.move.sz"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_sword_z_move_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.move.st": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.sneak_trident_move_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.move.sz"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.sneak_trident_move_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sneak.move.s": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_move_shield_main_npa"
+						},
+						{
+							"2" : "variable.sneak_shield_main_npa"
+						},
+						{
+							"3" : "variable.sneak_move_shield_both_npa"
+						},
+						{
+							"4" : "variable.sneak_shield_both_npa"
+						},
+						{
+							"5" : "variable.sneak_move_shield_off_npa"
+						},
+						{
+							"6" : "variable.sneak_shield_off_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"sneak.move.rs"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"2": "variable.sneak_shield_main_npa"
+						},
+						{
+							"3" : "variable.sneak_move_shield_both_npa"
+						},
+						{
+							"4" : "variable.sneak_shield_both_npa"
+						},
+						{
+							"5" : "variable.sneak_move_shield_off_npa"
+						},
+						{
+							"6" : "variable.sneak_shield_off_npa"
+						},
+						{
+							"default": "!variable.sneak_move_shield_main_npa && !variable.sneak_shield_main_npa && !variable.sneak_move_shield_both_npa && !variable.sneak_shield_both_npa && !variable.sneak_move_shield_off_npa && !variable.sneak_shield_off_npa"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"sneak.shield.r"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1": "variable.sneak_move_shield_main_npa"
+						},
+						{
+							"3" : "variable.sneak_move_shield_both_npa"
+						},
+						{
+							"4" : "variable.sneak_shield_both_npa"
+						},
+						{
+							"5" : "variable.sneak_move_shield_off_npa"
+						},
+						{
+							"6" : "variable.sneak_shield_off_npa"
+						},
+						{
+							"default": "!variable.sneak_move_shield_main_npa && !variable.sneak_shield_main_npa && !variable.sneak_move_shield_both_npa && !variable.sneak_shield_both_npa && !variable.sneak_move_shield_off_npa && !variable.sneak_shield_off_npa"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"sneak.move.rs"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1": "variable.sneak_move_shield_main_npa"
+						},
+						{
+							"2": "variable.sneak_shield_main_npa"
+						},
+						{
+							"4" : "variable.sneak_shield_both_npa"
+						},
+						{
+							"5" : "variable.sneak_move_shield_off_npa"
+						},
+						{
+							"6" : "variable.sneak_shield_off_npa"
+						},
+						{
+							"default": "!variable.sneak_move_shield_main_npa && !variable.sneak_shield_main_npa && !variable.sneak_move_shield_both_npa && !variable.sneak_shield_both_npa && !variable.sneak_move_shield_off_npa && !variable.sneak_shield_off_npa"
+						}
+					]
+				},
+				"4": {
+					"animations": [
+						"sneak.shield.r"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1": "variable.sneak_move_shield_main_npa"
+						},
+						{
+							"2": "variable.sneak_shield_main_npa"
+						},
+						{
+							"3" : "variable.sneak_move_shield_both_npa"
+						},
+						{
+							"5" : "variable.sneak_move_shield_off_npa"
+						},
+						{
+							"6" : "variable.sneak_shield_off_npa"
+						},
+						{
+							"default": "!variable.sneak_move_shield_main_npa && !variable.sneak_shield_main_npa && !variable.sneak_move_shield_both_npa && !variable.sneak_shield_both_npa && !variable.sneak_move_shield_off_npa && !variable.sneak_shield_off_npa"
+						}
+					]
+				},
+				"5": {
+					"animations": [
+						"sneak.move.ls",
+						{
+						"cn.sneak.move": "!variable.t && !variable.bow && !variable.shield_main"
+						}
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_move_shield_main_npa"
+						},
+						{
+							"2" : "variable.sneak_shield_main_npa"
+						},
+						{
+							"3" : "variable.sneak_move_shield_both_npa"
+						},
+						{
+							"4" : "variable.sneak_shield_both_npa"
+						},
+						{
+							"6" : "variable.sneak_shield_off_npa"
+						},
+						{
+							"default": "!variable.sneak_move_shield_main_npa && !variable.sneak_shield_main_npa && !variable.sneak_move_shield_both_npa && !variable.sneak_shield_both_npa && !variable.sneak_move_shield_off_npa && !variable.sneak_shield_off_npa"
+						}
+					]
+				},
+				"6": {
+					"animations": [
+						"sneak.shield.l"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "variable.sneak_move_shield_main_npa"
+						},
+						{
+							"2" : "variable.sneak_shield_main_npa"
+						},
+						{
+							"3" : "variable.sneak_move_shield_both_npa"
+						},
+						{
+							"4" : "variable.sneak_shield_both_npa"
+						},
+						{
+							"5" : "variable.sneak_move_shield_off_npa"
+						},
+						{
+							"default": "!variable.sneak_move_shield_main_npa && !variable.sneak_shield_main_npa && !variable.sneak_move_shield_both_npa && !variable.sneak_shield_both_npa && !variable.sneak_move_shield_off_npa && !variable.sneak_shield_off_npa"
+						}
+					]
+				}
+			}
+		}
+	}
+}

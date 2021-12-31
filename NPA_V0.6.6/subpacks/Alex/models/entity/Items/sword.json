@@ -1,0 +1,46 @@
+{
+	"format_version" : "1.16.0",
+	"minecraft:geometry" : [
+	{
+			"description" : {
+				"identifier" : "geometry.sword",
+				"texture_width" : 16.0,
+				"texture_height" : 16.0
+			},
+			"bones" : [
+				{
+					"name" : "rightitem",
+					"texture_meshes" : [
+						{
+							"local_pivot" : [ 6.0, 0.0, 6.0 ],
+							"position" : [ 2.05, 1.3, -3],
+							"rotation" : [ 0.0, -134.1, 90.0 ],
+							"scale": [0.992, 0.992, 0.992],
+							"texture" : "default"
+						}
+					]
+				}
+			]
+		},
+			{
+			"description" : {
+				"identifier" : "geometry.sword1",
+				"texture_width" : 16.0,
+				"texture_height" : 16.0
+			},
+			"bones" : [
+				{
+					"name" : "item",
+					"texture_meshes" : [
+						{
+							"local_pivot" : [ 0, 0, 0 ],
+							"position" : [ 0, 16, -8 ],
+							"rotation" : [ 0, 43, -90 ],
+							"texture" : "default"
+						}
+					]
+				}
+			]
+		}
+	]
+}

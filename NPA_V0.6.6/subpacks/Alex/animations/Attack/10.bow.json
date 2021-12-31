@@ -1,0 +1,52 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.attack.bow": {
+		    "loop": "hold_on_last_frame",
+			"animation_length": 1.5,
+			"bones": {
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [-25, 70, 0],
+						"0.3": [-25, 70, 0],
+						"0.7": [-120, "15 + query.target_x_rotation", -70]
+					},
+					"position": {
+						"0.3": [0, 0, 0],
+						"0.7": [0, -0.5, -1]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [25, 0, 0],
+						"0.45": [-45, 0, 0]
+					},
+					"scale": [1, 1.1, 1]
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-32.5, -20, 0],
+						"0.3": [-32.5, -20, 0],
+						"0.7": ["-75 + query.target_x_rotation", 20, 0]
+					}
+				},
+				"kbody": {
+					"rotation": {
+						"0.0": [30, 0, 0],
+						"0.3": [40, 0, 0],
+						"0.7": [0, "-30+query.target_y_rotation", 0]
+					}
+				},
+				"leftItem": {
+					"scale": [0, 0, 0]
+				},
+				"RightArmDown": {
+					"rotation": [5, 0, 0]
+				},
+				"RightItem": {
+					"rotation": [0, -30, 0]
+				}
+			}
+		}
+	}
+}

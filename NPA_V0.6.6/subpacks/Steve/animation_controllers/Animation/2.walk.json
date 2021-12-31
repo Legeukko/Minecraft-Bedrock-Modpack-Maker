@@ -1,0 +1,77 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.walk": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.walk_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"walk",
+						{
+						"cn.walk": "!variable.bow && !variable.shield_main"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.walk_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.walk.c": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.walk_c_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"walk.c"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.walk_c_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.walk.uis": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "variable.walk_use_items_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"walk.uis"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!variable.walk_use_items_npa"
+						}
+					]
+				}
+			}
+		}
+	}
+}

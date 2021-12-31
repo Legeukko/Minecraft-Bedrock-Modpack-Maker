@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.hold.r": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.15,
+			"bones": {
+				"RightItem": {
+					"rotation": [0, 0, 0],
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.15": [1, 1, 1]
+					}
+				},
+				"RightArmUp": {
+					"rotation": [-20, 0, 0]
+				},
+				"Item": {
+					"rotation": [0, 0, 0],
+					"scale": {
+						"0.0": [0, 0, 0],
+						"0.15": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.player.holding" : {
+			"loop" : true,
+			"bones" : {
+				"leftarmup" : {
+					"rotation" : [ "variable.is_holding_left ? (this -20) : 0.0", 0.0, 0.0 ]
+				}
+			}
+		}
+	}
+}

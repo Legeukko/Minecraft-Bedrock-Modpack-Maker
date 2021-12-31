@@ -1,0 +1,386 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.sneak": {
+			"loop": true,
+			"animation_length": 1.4,
+			"bones": {
+				"KRoot": {
+					"position": [0, -2, 0]
+				},
+				"LeftArmUp": {
+					"rotation": [-15, 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": [-15, 0, 0]
+				},
+				"LeftItem": {
+					"rotation": [0, 0, 0]
+				},
+				"RightItem": {
+					"rotation": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": [20, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-13, 0, -4]
+				},
+				"LeftLegDown": {
+					"rotation": [15, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-13, 0, 4]
+				},
+				"RightLegDown": {
+					"rotation": [13, 0, 0]
+				}
+			}
+		},
+		"animation.player.sneak.sq": {
+			"loop": true,
+			"bones": {
+				"Kroot": {
+					"rotation": [0, -70, 0],
+					"position": [0, -2, 0]
+				},
+				"kbody": {
+					"rotation": [0, 0, -2.5]
+				},
+				"head": {
+					"rotation": [7.5, 0, -7.5]
+				},
+				"RightArmUp": {
+					"rotation": [-30, "60+query.target_y_rotation * 1", "query.target_x_rotation * 0.4"]
+				},
+				"RightArmDown": {
+					"rotation": [-30, 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": [17.5, -27.5, -27.5]
+				},
+				"LeftArmDown": {
+					"rotation": [-35, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-20, 40, 12.5]
+				},
+				"RightLegDown": {
+					"rotation": [25, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -15]
+				},
+				"LeftLegDown": {
+					"rotation": [32.5, 0, 0]
+				},
+								"item": {
+					"rotation": [25, 0, 0],
+					"position": [0, 0, -3]
+				}
+			}
+		},
+		"animation.player.sneak.sz": {
+			"loop": true,
+			"bones": {
+				"kRoot": {
+					"rotation": [0, 50, 0],
+					"position": [0, -2, 0]
+				},
+				"head": {
+					"rotation": [5, 0, 5]
+				},
+				"RightArmUp": {
+					"rotation": [20, 0, 27.5]
+				},
+				"RightArmDown": {
+					"rotation": [-35, 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": [0, 15, -25]
+				},
+				"LeftArmDown": {
+					"rotation": [-22.5, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-17.5, 17.5, 10]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-2.5, -20, -12.5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				},
+				"item": {
+					"rotation": [25, 0, 0],
+					"position": [0, 0, -3]
+				}
+			}
+		},
+		"animation.player.sneak.ssb": {
+			"loop": true,
+			"bones": {
+				"Kbody": {
+					"rotation": ["0-((math.cos(query.life_time * 103.2) * 0.4) + 0.4)", 13, 0],
+					"position": [0, "-((math.cos(query.life_time * 103.2) * 0.2) + 0.2)", 0]
+				},
+				"LeftArmup": {
+					"rotation": [0, -20, "10.5-((math.cos(query.life_time * 103.2) * 3) + 2.865)"]
+				},
+				"Leftitem": {
+					"position": [0, -1, 3]
+				},
+				"RightArmup": {
+					"rotation": [23, 22.5, "22.5-((math.cos(query.life_time * 103.2) * -3) + 2.865)"],
+					"position": [0.5, 0, 0.5]
+				},
+				"RightArmDown": {
+					"rotation": [-25, 0, 0]
+				}
+			}
+		},
+		"animation.player.sneak.ssl": {
+			"loop": true,
+			"bones": {
+				"RightLegup": {
+					"rotation": ["12.5-((math.cos(query.life_time * 103.2) * -1.5) + -1.5)", 30, 12],
+					"position": [0, 0, 0.5]
+				},
+				"LeftLegup": {
+					"rotation": ["-6-((math.cos(query.life_time * 103.2) * 1.5) + 1.5)", 0, -2.5],
+					"position": [0, 0, -0.5]
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"RightLegDown": {
+					"rotation": [10, 0, 0]
+				}
+			}
+		},
+		"animation.player.sneak.shield.r" : {
+			"loop" : true,
+			"bones" : {
+				"RightArmUp": {
+					"rotation": [-37, -30, 0]
+				},
+				"RightArmDown": {
+					"rotation": [-10, 0, 0]
+				},
+				"Rightitem": {
+					"rotation": [-25, 0, -50],
+					"position": [-2, -7, 0]
+				}
+			}
+		},
+		"animation.player.sneak.shield.l" : {
+			"loop" : true,
+			"bones" : {
+			    "leftArmUp": {
+					"rotation": [-37, 30, 0]
+				},
+				"leftArmDown": {
+					"rotation": [-10, 0, 0]
+				},
+				"leftitem": {
+					"rotation": [-25, 0, 50],
+					"position": [2, -7, 0]
+				}
+			}
+		},
+		"animation.player.sneak.move": {
+			"loop": true,
+			"bones": {
+				"KRoot": {
+					"position": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": ["1+((math.cos(query.life_time * 520) * 1.9) * 1.9)", "((math.cos(query.life_time * 260) * 3.5) * 3.5)", 0]
+				},
+				"RightLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * -28", 0, 1.25]
+				},
+				"RightLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * -20", 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * 28", 0, -1.25]
+				},
+				"LeftLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * 20", 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": ["8+Math.cos(query.life_time * 260) * 23", "Math.cos(query.life_time * 260) * 10", 0]
+				},
+				"LeftArmUp": {
+					"rotation": ["8-Math.cos(query.life_time * 260) * 23", "Math.cos(query.life_time * 260) * 10", 0]
+				},
+				"LeftArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * -15", 0, 0]
+				},
+				"RightArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * 15", 0, 0]
+				}
+			}
+		},
+		"animation.player.sneak.move.c": {
+			"loop": true,
+			"bones": {
+				"KRoot": {
+					"position": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": ["1+((math.cos(query.life_time * 520) * 1.9) * 1.9)", "((math.cos(query.life_time * 260) * 3.5) * 3.5)", 0]
+				},
+				"RightLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * -28", 0, 1.25]
+				},
+				"RightLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * -20", 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * 28", 0, -1.25]
+				},
+				"LeftLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * 20", 0, 0]
+				}
+			}
+		},
+		"animation.player.sneak.move.sq": {
+			"loop": true,
+			"bones": {
+				"RightLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * -18", "20-Math.cos(query.life_time * 260) * 0", 1.25]
+				},
+				"RightLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * -10", 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": ["-10+Math.cos(query.life_time * 260) * 20", 50, -1.25]
+				},
+				"LeftLegDown": {
+					"rotation": ["-10+Math.sin(query.life_time * 260) * 10", 0, 0]
+				},
+				"Kbody": {
+					"rotation": ["1+((math.cos(query.life_time * 520) * 1.4) * 1.4)", "((math.cos(query.life_time * 260) * 2) * 2)", 0]
+				}
+			}
+		},
+		"animation.player.sneak.move.sz": {
+			"loop": true,
+			"bones": {
+				"RightLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * -18", -20, 1.25]
+				},
+				"RightLegDown": {
+					"rotation": ["0+Math.sin(query.life_time * 260) * -13", 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * 18", -20, -1.25]
+				},
+				"LeftLegDown": {
+					"rotation": ["0+Math.sin(query.life_time * 260) * 13", 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": ["8-Math.cos(query.life_time * 260) * 15", "Math.cos(query.life_time * 260) * 10", 0]
+				},
+				"LeftArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * -16", 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": ["10+Math.cos(query.life_time * 260) * 10", "20+Math.cos(query.life_time * 260) * 0", 0]
+				},
+				"RightArmDown": {
+					"rotation": [35, 0, 0]
+				},
+				"Kbody": {
+					"rotation": ["1+((math.cos(query.life_time * 520) * 1.9) * 1.9)", "((math.cos(query.life_time * 260) * 3.5) * 3.5)", 0]
+				},
+				"kroot": {
+					"rotation": [0, -15, 0]
+				}
+			}
+		},
+		"animation.player.sneak.move.rs": {
+			"loop": true,
+			"bones": {
+				"KRoot": {
+					"position": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": ["1+((math.cos(query.life_time * 520) * 1.9) * 1.9)", "((math.cos(query.life_time * 260) * 3.5) * 3.5)", 0]
+				},
+				"RightLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * -28", 0, 1.25]
+				},
+				"RightLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * -20", 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * 28", 0, -1.25]
+				},
+				"LeftLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * 20", 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": ["-40+Math.cos(query.life_time * 260) * 3", "-20+Math.cos(query.life_time * 260) * -10", 0]
+				},
+				"LeftArmUp": {
+					"rotation": ["8-Math.cos(query.life_time * 260) * 23", "Math.cos(query.life_time * 260) * 10", 0]
+				},
+				"LeftArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * -15", 0, 0]
+				},
+				"RightArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * 5", 0, 0]
+				},
+				"Rightitem": {
+					"rotation": [-25, 0, -50],
+					"position": [-2, -7, 0]
+				}
+			}
+		},
+		"animation.player.sneak.move.ls": {
+			"loop": true,
+			"bones": {
+				"KRoot": {
+					"position": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": ["1+((math.cos(query.life_time * 520) * 1.9) * 1.9)", "((math.cos(query.life_time * 260) * 3.5) * 3.5)", 0]
+				},
+				"RightLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * -28", 0, 1.25]
+				},
+				"RightLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * -20", 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": ["15+Math.cos(query.life_time * 260) * 28", 0, -1.25]
+				},
+				"LeftLegDown": {
+					"rotation": ["3+Math.sin(query.life_time * 260) * 20", 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": ["8+Math.cos(query.life_time * 260) * 23", "Math.cos(query.life_time * 260) * 10", 0]
+				},
+				"LeftArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * -5", 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": ["-40+Math.cos(query.life_time * 260) * 3", "20+Math.cos(query.life_time * 260) * -10", 0]
+				},
+				"RightArmDown": {
+					"rotation": ["-15+Math.cos(query.life_time * 260) * 15", 0, 0]
+				},
+				"leftitem": {
+					"rotation": [-25, 0, 50],
+					"position": [2, -7, 0]
+				}
+			}
+		}
+	}
+}

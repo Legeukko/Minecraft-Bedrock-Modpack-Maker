@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.shield1": {
+    "arrays": {
+        "geometries": {
+          "Array.geos": [ "Geometry.left", "Geometry.right" ]
+        }
+      	},
+      "geometry": "Array.geos[query.get_equipped_item_name == 'shield']",
+      "materials": [ { "*": "variable.is_enchanted ? material.enchanted : material.default" } ],
+      "textures": [ "texture.default", "texture.enchanted" ]
+    },
+    "controller.render.shield2": {
+      "geometry": "geometry.both",
+      "materials": [ { "*": "variable.is_enchanted ? material.enchanted : material.default" } ],
+      "textures": [ "texture.default", "texture.enchanted" ]
+    }
+  }
+}

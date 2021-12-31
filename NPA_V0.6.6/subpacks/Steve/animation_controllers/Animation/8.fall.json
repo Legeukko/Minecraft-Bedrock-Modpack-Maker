@@ -1,0 +1,231 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.fall": {
+			"states": {
+				"default": {
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"1" : "!query.is_on_ground && query.ground_speed>23 && !query.is_sprinting && !query.is_in_water && !query.is_gliding"
+						},
+						{
+						"3" : "!query.is_on_ground && query.ground_speed>23 && !query.is_sprinting && !query.is_in_water && query.is_gliding"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"fall"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"2": "query.is_on_ground && query.ground_speed<23 && !query.is_in_water && !variable.t"
+						},
+						{
+							"t2": "query.is_on_ground && query.ground_speed<23 && !query.is_in_water && variable.t"
+						},
+						{
+							"default": "(!query.is_on_ground && query.ground_speed<23) || query.is_in_water"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"ground"
+					],
+					"blend_transition": 1.5,
+					"transitions": [
+						{
+							"default": "query.is_on_ground || query.ground_speed || query.is_sprinting && !query.is_in_water"
+						}
+					]
+				},
+				"t2": {
+					"animations": [
+						"ground.t"
+					],
+					"blend_transition": 1.5,
+					"transitions": [
+						{
+							"default": "query.is_on_ground || query.ground_speed || query.is_sprinting && !query.is_in_water"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"default"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"4": "query.is_on_ground && query.ground_speed<23 && !query.is_in_water && !variable.t"
+						},
+						{
+							"t4": "query.is_on_ground && query.ground_speed<23 && !query.is_in_water && variable.t"
+						},
+						{
+							"5" : "!query.is_on_ground && query.ground_speed>23 && !query.is_sprinting && !query.is_in_water && !query.is_gliding"
+						}
+					]
+				},
+				"4": {
+					"animations": [
+						"ground"
+					],
+					"blend_transition": 1.5,
+					"transitions": [
+						{
+							"default": "query.is_on_ground || query.ground_speed || query.is_sprinting && !query.is_in_water"
+						}
+					]
+				},
+				"t4": {
+					"animations": [
+						"ground.t"
+					],
+					"blend_transition": 1.5,
+					"transitions": [
+						{
+							"default": "query.is_on_ground || query.ground_speed || query.is_sprinting && !query.is_in_water"
+						}
+					]
+				},
+				"5": {
+					"animations": [
+						"fall"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"6": "query.is_on_ground && query.ground_speed<23 && !query.is_in_water && !variable.t"
+						},
+						{
+							"t6": "query.is_on_ground && query.ground_speed<23 && !query.is_in_water && variable.t"
+						},
+						{
+							"default": "(!query.is_on_ground && query.ground_speed<23) || query.is_in_water"
+						}
+					]
+				},
+				"6": {
+					"animations": [
+						"ground"
+					],
+					"blend_transition": 1.5,
+					"transitions": [
+						{
+							"default": "query.is_on_ground || query.ground_speed || query.is_sprinting && !query.is_in_water"
+						}
+					]
+				},
+				"t6": {
+					"animations": [
+						"ground.t"
+					],
+					"blend_transition": 1.5,
+					"transitions": [
+						{
+							"default": "query.is_on_ground || query.ground_speed || query.is_sprinting && !query.is_in_water"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.sleep": {
+			"states": {
+				"default": {
+					"blend_transition": 0,
+					"transitions": [
+						{
+							"default1" : "!variable.is_first_person && query.is_sleeping && !query.item_is_charged && !query.is_using_item"
+						}
+					]
+				},
+				"default1": {
+					"animations": [
+						"default"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sleep" : "variable.is_first_person || !query.is_sleeping"
+						}
+					]
+				},
+				"sleep": {
+					"animations": [
+						"sleep"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default" : "variable.is_first_person || variable.attack || query.all_animations_finished || query.item_is_charged || query.is_using_item"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.fire": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && query.is_onfire"
+						}
+					],
+					"blend_transition": 0
+				},
+				"1": {
+					"animations": [
+						"fire1"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"default": "variable.is_first_person || !query.is_onfire"
+						},
+						{
+							"2" : "query.all_animations_finished && !variable.is_first_person && query.is_onfire"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"fire2"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "variable.is_first_person || !query.is_onfire"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.rain": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"rain" : "!query.is_sprinting && !variable.attack && query.ground_speed && !variable.is_first_person && query.is_in_water_or_rain && !query.is_in_water && !variable.is_holding_right && !variable.is_holding_left"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"rain": {
+					"animations": [
+						"rain"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"default": "query.is_sprinting || variable.attack || !query.ground_speed || variable.is_first_person || !query.is_in_water_or_rain || query.is_in_water || variable.is_holding_right || variable.is_holding_left"
+						}
+					]
+				}
+			}
+		}
+	}
+}

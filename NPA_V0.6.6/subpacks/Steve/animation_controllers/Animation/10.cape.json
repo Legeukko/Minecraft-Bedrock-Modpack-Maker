@@ -1,0 +1,97 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+	    "controller.animation.player.cape0": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"cape0" : "query.ground_speed>0.5"
+						}
+					]
+				},
+				"cape0": {
+					"animations": [
+						"cape0"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "query.ground_speed<0.5"
+						}
+					]
+				}
+			}
+		},
+	    "controller.animation.player.cape1": {
+			"states": {
+				"default": {
+					"blend_transition": 0,
+					"transitions": [
+						{
+							"cape1" : "variable.arrmor.all"
+						}
+					]
+				},
+				"cape1": {
+					"animations": [
+						"cape1"
+					],
+					"blend_transition": 0,
+					"transitions": [
+						{
+							"default": "!variable.arrmor.all"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.cape2": {
+			"states": {
+				"default": {
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"cape2" : "query.ground_speed < 1"
+						}
+					]
+				},
+				"cape2": {
+					"animations": [
+						"cape2"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"default": "query.ground_speed > 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.cape3": {
+			"states": {
+				"default": {
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"cape3" : "query.is_riding"
+						}
+					]
+				},
+				"cape3": {
+					"animations": [
+						"cape3"
+					],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"default": "!query.is_riding"
+						}
+					]
+				}
+			}
+		}
+	}
+}

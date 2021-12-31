@@ -1,0 +1,89 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.attack.blocks.body": {
+			"states": {
+				"default": {
+					"blend_transition": 0.12,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.is_holding_right && !variable.items_attack3 && !query.is_sneaking && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.blocks.hand1",
+						"-0.17"
+					],
+					"blend_transition": 0.07,
+					"transitions": [
+						{
+							"default": "variable.fr || (query.all_animations_finished && !variable.attack) || !variable.is_holding_right || variable.items_attack3 || query.is_sneaking || query.is_in_water || query.is_using_item"
+						},
+						{
+							"2": "!variable.fr && (query.any_animation_finished && variable.attack) && variable.is_holding_right && !variable.items_attack3 && !query.is_sneaking && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.blocks.hand2",
+						"-0.17"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "variable.fr || (query.all_animations_finished && !variable.attack) || !variable.is_holding_right || variable.items_attack3 || query.is_sneaking || query.is_in_water || query.is_using_item"
+						},
+						{
+							"1": "!variable.fr && (query.any_animation_finished && variable.attack) && variable.is_holding_right && !variable.items_attack3 && !query.is_sneaking && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.blocks.legs": {
+			"states": {
+				"default": {
+					"blend_transition": 0.19,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.is_holding_right && !variable.items_attack4 && !query.is_sneaking && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.blocks.legs",
+						"-0.4"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "variable.fr || (query.all_animations_finished && !variable.attack) || !variable.is_holding_right || variable.items_attack4 || query.is_sneaking || query.is_in_water || query.is_using_item"
+						},
+						{
+							"2": "!variable.fr && (query.any_animation_finished && variable.attack) && variable.is_holding_right && !variable.items_attack4 && !query.is_sneaking && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.blocks.legs",
+						"-0.5"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "variable.fr || (query.all_animations_finished && !variable.attack) || !variable.is_holding_right || variable.items_attack4 || query.is_sneaking || query.is_in_water || query.is_using_item"
+						},
+						{
+							"1": "!variable.fr && (query.any_animation_finished && variable.attack) && variable.is_holding_right && !variable.items_attack4 && !query.is_sneaking && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				}
+			}
+		}
+	}
+}

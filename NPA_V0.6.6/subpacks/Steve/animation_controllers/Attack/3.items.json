@@ -1,0 +1,47 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.attack.items": {
+			"states": {
+				"default": {
+					"blend_transition": 0.12,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.aph && !variable.ss && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.items.hand1",
+						"-0.17"
+					],
+					"blend_transition": 0.07,
+					"transitions": [
+						{
+							"default": "variable.fr || (query.all_animations_finished && !variable.attack) || !variable.aph || variable.ss || query.is_in_water || query.is_using_item"
+						},
+						{
+							"2": "!variable.fr && query.any_animation_finished && variable.attack && variable.aph && !variable.ss && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.items.hand2",
+						"-0.17"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "variable.fr || (query.all_animations_finished && !variable.attack) || !variable.aph || variable.ss || query.is_in_water || query.is_using_item"
+						},
+						{
+							"1": "!variable.fr && query.any_animation_finished && variable.attack && variable.aph && !variable.ss && !query.is_in_water && !query.is_using_item"
+						}
+					]
+				}
+			}
+		}
+	}
+}

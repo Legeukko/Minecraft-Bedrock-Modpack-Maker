@@ -1,0 +1,265 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.crossbow" : {
+			"initial_state" : "default",
+			"states" : {
+				"charge" : {
+					"animations" : [ "third_person_crossbow_equipped" ],
+					"blend_transition": 0.1,
+					"transitions" : [
+						{
+							"default" : "query.get_equipped_item_name != 'crossbow' || (query.item_remaining_use_duration <= 0.0 && !query.item_is_charged)"
+						},
+						{
+							"hold" : "query.item_is_charged"
+						}
+					]
+				},
+				"default" : {
+					"blend_transition": 0.1,
+					"transitions" : [
+						{
+							"hold" : "query.item_is_charged"
+						},
+						{
+							"charge" : "query.item_remaining_use_duration > 0.0"
+						}
+					]
+				},
+				"hold" : {
+					"animations" : [ "crossbow_hold" ],
+					"blend_transition": 0.1,
+					"transitions" : [
+						{
+							"default" : "query.get_equipped_item_name != 'crossbow' || (query.item_remaining_use_duration <= 0.0 && !query.item_is_charged)"
+						},
+						{
+							"charge" : "query.item_remaining_use_duration > 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.first_person_attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations": [
+						{
+							"first_person_attack_rotation": "variable.is_holding_right <= 0.0"
+						},
+						{
+							"first_person_attack_rotation_item": "variable.is_holding_right > 0.0 && !variable.t && !variable.shield_main"
+						},
+						{
+							"first_person_attack_rotation_item2": "variable.is_holding_right > 0.0 && (variable.t || variable.shield_main)"
+						}
+					],
+					"transitions" : [
+						{
+							"vr_attack" : "variable.is_using_vr"
+						}
+					]
+				},
+				"vr_attack" : {
+					"animations": [
+						{
+							"first_person_vr_attack_rotation": "variable.is_holding_right <= 0.0"
+						},
+						{
+							"first_person_attack_rotation_item": "variable.is_holding_right > 0.0 && !variable.t && !variable.shield_main"
+						},
+						{
+							"first_person_attack_rotation_item2": "variable.is_holding_right > 0.0 && (variable.t || variable.shield_main)"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "!variable.is_using_vr"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.first_person_map" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"one_hand" : "query.get_equipped_item_name('off_hand') == 'map' || query.get_equipped_item_name('off_hand') == 'shield'"
+						},
+						{
+							"two_hand" : "query.get_equipped_item_name('off_hand') != 'map' && query.get_equipped_item_name('off_hand') != 'shield'"
+						}
+					]
+				},
+				"one_hand" : {
+					"animations" : [
+						{
+							"first_person_map_hold_main_hand" : "query.get_equipped_item_name(0, 1) == 'map'"
+						},
+						{
+							"first_person_map_hold_off_hand" : "query.get_equipped_item_name('off_hand') == 'map' && (query.get_equipped_item_name == 'bow' ? !(variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0) : 1.0)"
+						}
+					],
+					"transitions" : [
+						{
+							"default" : "query.get_equipped_item_name(0, 1) != 'map' && query.get_equipped_item_name('off_hand') != 'map'"
+						},
+						{
+							"two_hand" : "query.get_equipped_item_name('off_hand') != 'map' && query.get_equipped_item_name('off_hand') != 'shield'"
+						}
+					]
+				},
+				"two_hand" : {
+					"animations" : [ "first_person_map_hold", "first_person_map_hold_attack" ],
+					"transitions" : [
+						{
+							"default" : "query.get_equipped_item_name(0, 1) != 'map' && query.get_equipped_item_name('off_hand') != 'map'"
+						},
+						{
+							"one_hand" : "query.get_equipped_item_name('off_hand') == 'map' || query.get_equipped_item_name('off_hand') == 'shield'"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.root" : {
+			"initial_state" : "first_person",
+			"states" : {
+				"first_person" : {
+					"animations" : [
+						"first_person_swap_item",
+						{
+							"first_person_attack_controller": "(variable.attack_time > 0.0f && variable.item_use_normalized <= 0.0f) && query.get_equipped_item_name != 'map'"
+						},
+						"first_person_base_pose",
+						{
+							"first_person_empty_hand" : "query.get_equipped_item_name(0, 1) != 'map'"
+						},
+						{
+							"first_person_walk" : "variable.bob_animation"
+						},
+						{
+							"first_person_map_controller" : "(query.get_equipped_item_name(0, 1) == 'map' || query.get_equipped_item_name('off_hand') == 'map')"
+						},
+						{
+							"first_person_crossbow_equipped": "query.get_equipped_item_name == 'crossbow' && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0)"
+						},
+						{
+							"first_person_crossbow_hold": "query.get_equipped_item_name == 'crossbow' && query.item_is_charged"
+						},
+						{
+							"first_person_breathing_bob": "variable.attack_time <= 0.0"
+						}
+					],
+					"transitions" : [
+						{
+							"paperdoll" : "variable.is_paperdoll"
+						},
+						{
+							"map_player" : "variable.map_face_icon"
+						},
+						{
+							"third_person" : "!variable.is_first_person"
+						}
+					]
+				},
+				"map_player" : {
+					"transitions" : [
+						{
+							"paperdoll" : "variable.is_paperdoll"
+						},
+						{
+							"first_person" : "variable.is_first_person"
+						},
+						{
+							"third_person" : "!variable.map_face_icon && !variable.is_first_person"
+						}
+					]
+				},
+				"paperdoll" : {
+					"animations" : [ "humanoid_base_pose", "look_at_target_ui", "move.arms", "move.legs", "cape" ],
+					"transitions" : [
+						{
+							"first_person" : "!variable.is_paperdoll && variable.is_first_person"
+						},
+						{
+							"map_player" : "variable.map_face_icon"
+						},
+						{
+							"third_person" : "!variable.is_paperdoll && !variable.is_first_person"
+						}
+					]
+				},
+				"third_person" : {
+					"animations" : [
+						"humanoid_base_pose",
+						{
+							"FIX1" : "query.get_equipped_item_name('main_hand') == 'shield'"
+						},
+						{
+							"FIX2" : "query.get_equipped_item_name('off_hand') == 'shield'"
+						},
+						{
+							"FIX3" : "query.get_equipped_item_name('main_hand') == 'shield' && query.get_equipped_item_name('off_hand') == 'shield'"
+						},
+						{
+							"FIX4" : "query.get_equipped_item_name('main_hand') == 'trident'"
+						},
+						{
+							"FIX5" : "query.get_equipped_item_name('main_hand') == 'crossbow'"
+						},
+						{
+							"FIX6" : "query.get_equipped_item_name('off_hand') != 'shield'"
+						},
+						{
+							"attack.rotations.r" : "!query.is_using_item && (variable.attack && query.is_sneaking && !variable.items_attack1 && !variable.shield_off) || (variable.attack && query.is_sneaking && !variable.items_attack2 && variable.shield_off) || (query.is_in_water) || (!query.is_on_ground && !variable.is_holding_right && !variable.is_holding_left) || (!query.is_sneaking && !query.is_on_ground && variable.bow || variable.crossbow || variable.shield_main) || (!query.is_sneaking && query.is_on_ground && variable.bow || variable.crossbow || variable.shield_main || (!variable.is_holding_right && query.ground_speed > 0.5) || (variable.shield_off && !query.is_sneaking && query.ground_speed < 0.5 && !variable.is_holding_right)) || (!query.is_on_ground && query.is_sprinting && !variable.is_holding_right) || (query.is_riding)"
+						},
+						{
+							"attack.rotations.l" : "(variable.shield_off && variable.shield_main && !query.is_sneaking) || (variable.shield_main && query.is_sneaking)"
+						},
+						{
+							"attack.trident3" : "!variable.is_first_person && variable.t && query.is_using_item"
+						},
+						{
+						"cape": "!query.is_riding"
+						},
+						{
+							"look_at_target" : "!query.is_sleeping"
+						},
+						{
+							"riding.arms" : "query.is_riding"
+						},
+						{
+							"riding.legs" : "query.is_riding"
+						},
+						"holding",
+						{
+							"charging" : "query.is_charging"
+						},
+						{
+							"sleeping" : "query.is_sleeping && query.is_alive"
+						},
+						{
+							"crossbow_controller" : "query.get_equipped_item_name == 'crossbow'"
+						}
+					],
+					"transitions" : [
+						{
+							"paperdoll" : "variable.is_paperdoll"
+						},
+						{
+							"first_person" : "variable.is_first_person"
+						},
+						{
+							"map_player" : "variable.map_face_icon"
+						}
+					]
+				}
+			}
+		}
+	}
+}

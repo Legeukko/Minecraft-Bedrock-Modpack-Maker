@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:crossbow",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/items/crossbow_standby",
+        "crossbow_pulling_0": "textures/items/crossbow_pulling_0",
+        "crossbow_pulling_1": "textures/items/crossbow_pulling_1",
+        "crossbow_pulling_2": "textures/items/crossbow_pulling_2",
+        "crossbow_arrow": "textures/items/crossbow_arrow",
+        "crossbow_rocket": "textures/items/crossbow_firework",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.crossbow_standby",
+        "crossbow_pulling_0": "geometry.crossbow_pulling_0",
+        "crossbow_pulling_1": "geometry.crossbow_pulling_1",
+        "crossbow_pulling_2": "geometry.crossbow_pulling_2",
+        "crossbow_arrow": "geometry.crossbow_arrow",
+        "crossbow_rocket": "geometry.crossbow_rocket",
+        "default1": "geometry.crossbow_standby1",
+        "crossbow_pulling_01": "geometry.crossbow_pulling_01",
+        "crossbow_pulling_11": "geometry.crossbow_pulling_11",
+        "crossbow_pulling_21": "geometry.crossbow_pulling_21",
+        "crossbow_arrow1": "geometry.crossbow_arrow1",
+        "crossbow_rocket1": "geometry.crossbow_rocket1"
+      },
+      "animations": {
+        "wield": "animation.crossbow.wield"
+      },
+      "scripts": {
+        "animate": [
+          "wield"
+        ]
+      },
+      "render_controllers": [ {"controller.render.crossbow": "c.is_first_person || query.owner_identifier != 'minecraft:player'"},{"controller.render.crossbow1": "!c.is_first_person && query.owner_identifier == 'minecraft:player'"} ]
+    }
+  }
+}

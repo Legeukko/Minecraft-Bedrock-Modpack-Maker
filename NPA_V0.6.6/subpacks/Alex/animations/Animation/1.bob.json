@@ -1,0 +1,77 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.bob.body": {
+			"loop": true,
+			"bones": {
+				"KRoot": {
+					"position": [0, -0.5, 0]
+				},
+				"Kbody": {
+					"rotation": ["-2-((math.cos(query.life_time * 100) * 2.7) - 1.5)", 0, 0],
+					"position": [0, "-((math.cos(query.life_time * 103.2) * 0.2) * -0.2)", 0]
+				},
+				"LeftArmDown": {
+					"rotation": [-10, 0, 0]
+				},
+				"RightArmDown": {
+					"rotation": [-10, 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": [0, 0, "-4-((math.cos(query.life_time * 105) * 2.8) + 2.8)"]
+				},
+				"RightArmUp": {
+					"rotation": [0, 0, "4+((math.cos(query.life_time * 105) * 2.8) + 2.8)"]
+				},
+				"LeftLegUp": {
+					"rotation": [-2.5, 0, -2]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-2.5, 0, 2]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				}
+			}
+		},
+		"animation.player.bob.arms": {
+			"loop": true,
+			"bones": {
+				"LeftArmUp": {
+					"rotation": ["3-((math.cos(query.life_time * 105) * 3) + 3)", 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": ["3-((math.cos(query.life_time * 105) * 3) + 3)", 0, 0]
+				},
+				"LeftArmDown": {
+					"rotation": ["((math.cos(query.life_time * 105) * 5) + 2)", 0, 0]
+				},
+				"RightArmDown": {
+					"rotation": ["((math.cos(query.life_time * 105) * 5) + 2)", 0, 0]
+				}
+			}
+		},
+		"animation.player.bob.legs": {
+			"loop": true,
+			"bones": {
+				"LeftLegUp": {
+					"rotation": [0, -5, 0],
+					"position": [0.1, 0, 0]
+				},
+				"LeftLegDown": {
+					"rotation": [2, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [0, 5, 0],
+					"position": [-0.1, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [2, 0, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,255 @@
+v1.0.0
+[Villager]
+-hands are now dynamic when walking
+-new panic animation when it's being chased by zombies
+-new eye blinking animation
+
+[Creeper]
+-new body idle animation
+-new eye blinking animation
+-improved walking animation
+
+[Zombie]
+-improved hand animation
+-new realistic walking animation(bugged)
+
+v1.1.0
+[Zombie]
+-improved hand animation
+-new realistic walking animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Baby Zombie]
+-improved hand animation
+-new realistic running animation
+-new realistic idle animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Husk]
+-improved hand animation
+-new realistic walking animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Baby Husk]
+-improved hand animation
+-new realistic running animation
+-new realistic idle animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Drowned]
+-improved hand animation
+-new realistic walking animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Baby Zombie]
+-improved hand animation
+-new realistic running animation
+-new realistic idle animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Husk]
+-improved hand animation
+-new realistic walking animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Baby Husk]
+-improved hand animation
+-new realistic running animation
+-new realistic idle animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+v1.1.4
+[Gameplay]
+-achievements are now available even with this addon enabled
+
+[Cow]
+-new walking animation
+-new idle animation
+-new death animation
+-new running animation
+-new blinking animation
+
+[Mooshroom]
+-new walking animation
+-new idle animation
+-new death animation
+-new running animation
+-new blinking animation
+
+[Chicken]
+-new walking animation
+-new idle animation
+-new blinking animation
+
+[Pig]
+-new walking animation
+-new idle animation
+-new death animation
+-new blinking animation
+
+[Wolf]
+-new walking animation
+-new angry animation
+-new idle animation
+-new shaking animation
+-new excited animation
+-new sitting animation
+-new blinking animation
+
+[Known Issues]
+-Zombie chestplate armor is glitched
+-Mooshroom's mushroom in its head is glitched
+
+v1.1.6
+[Squid]
+
+-brand new model
+-new idle animation
+-new swimming animation
+
+[Glow Squid]
+
+-brand new model
+-new idle animation
+-new swimming animation
+
+[Known Issues]
+-Zombie chestplate armor is glitched
+-Mooshroom's mushroom in its head is glitched
+
+v1.2.8
+[Enderman]
+-new walking animation
+-new running animation(when angry)
+
+[Zombie Villager]
+-improved hand animation
+-new realistic walking animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Baby Zombie Villager]
+-improved hand animation
+-new realistic running animation
+-new realistic idle animation
+-new swimming animation
+-new death animation
+-new attack animation
+
+[Miscellanious]
+-new blood effect when mobs are killed
+list of mobs with blood effect
+-villager
+-zombie
+-zombie villager
+-creeper
+-drowned
+-husk
+-cow
+-chicken
+-pig
+-mooshroom
+-wolf
+-enderman
+
+v1.3.2
+-endermen can now blink
+-revamped villager walking animation
+-brand new villager panicking animation
+-new villager idle animation
+-villagers can now put their hands together when they're not walking(like in the vanilla game)
+-polished the cow and mooshroom walking animation
+-polished the pig walk animation
+-polished creeper animation
+-matched the wolf walk animation to real life dogs
+-fixed wolf eyelids not rendering correctly
+-tweaked the death animation of all mobs
+-tweaked enderman walking animation
+-improved enderman running animation
+-new sheep walking animation
+-new sheep death animation
+-added new optional toggle! you can now choose to use the vanilla squid model or the new squid model, both with different animations
+-smoothened all mob animations
+
+v1.4.4
+-fixed villager sleeping animation
+-fixed glitched zombie armor
+-new skeleton idle animation
+-new skeleton walking animation
+-new skeleton riding animation
+-new skeleton bow animation
+-new stray idle animation
+-new stray walking animation
+-new stray riding animation
+-new stray bow animation
+-optimized creeper walking animation
+-optimized creeper death animation
+-improved zombie, husk, drowned, and zombie villager idle animation
+-improved zombie, husk, drowned, and zombie villager walking animation
+-improved baby zombie, baby husk, baby drowned, and baby zombie villager running animation
+-improved zombie, husk, drowned, and zombie villager death animation
+-improved wolf death animation
+-new wolf running animation
+-new wandering trader idle animation
+-new wandering trader walking animation
+-new wandering trader panic animation
+-new wandering trader death animation
+-new spider and cave spider walk animation
+-new animated spider and cave spider fangs
+-spiders and cave spiders will now realistically climb walls
+-spiders and cave spiders will now realistically stick on ceilings
+-new spider and cave spider attack animation
+-new spider and cave spider death animation
+
+v1.6.3
+-fixed zombie death animation
+-fixed enderman floating block animation
+-improved skeleton walking animation
+-new skeleton death animation
+-new iron golem idle animation
+-new iron golem walk animation
+-new iron golem attack animation
+-new iron golem give flower animation
+-new iron golem death animation
+
+v1.6.4
+-fixed crash when going or spawning near a village on some devices with higher render distance
+
+v1.8.4
+-new cat idle animation
+-new cat walking animation
+-new cat sprint animation
+-new cat lie down animation
+-new cat sit animation
+-new cat death animation
+-new cat blinking animation
+-new cat blood effect particles
+-new ocelot idle animation
+-new ocelot walking animation
+-new ocelot sprint animation
+-new ocelot lie down animation
+-new ocelot sit animation
+-new ocelot death animation
+-new ocelot blinking animation
+-new ocelot blood effect particles
+===================================================================================================================
+[Copyright] [Raboy13] [2021]
+Author: Raboy13
+Youtube: https://youtube.com/c/Raboy13

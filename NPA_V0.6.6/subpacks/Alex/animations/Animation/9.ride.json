@@ -1,0 +1,86 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.riding.legs": {
+			"loop": true,
+			"animation_length": 1000000,
+			"bones": {
+				"LeftArmUp": {
+					"rotation": [3, 0, "-((math.cos(query.life_time * 103.2) * 2.865) + 2.865)"]
+				},
+				"LeftArmDown": {
+					"rotation": [-10, 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": [3, 0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865"]
+				},
+				"RightArmDown": {
+					"rotation": [-10, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-80, -30, -2.5]
+				},
+				"LeftLegDown": {
+					"rotation": [60, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-80, 30, 2.5]
+				},
+				"RightLegDown": {
+					"rotation": [60, 0, 0]
+				},
+				"LeftItem": {
+					"rotation": [0, 0, 0]
+				},
+				"RightItem": {
+					"rotation": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": [20, 0, 0]
+				},
+				"kroot": {
+					"position": [0, -2, 0]
+				}
+			}
+		},
+		"animation.player.riding.arms": {
+			"loop": true,
+			"animation_length": 0,
+			"bones": {
+				"LeftArmUp": {
+					"rotation": [-30, 5, 5]
+				},
+				"LeftArmDown": {
+					"rotation": [-15, 0, 0]
+				},
+				"RightArmUp": {
+					"rotation": [-30, -5, -5]
+				},
+				"RightArmDown": {
+					"rotation": [-15, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-1.5, 0, -2.5]
+				},
+				"LeftLegDown": {
+					"rotation": [3, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-1.5, 0, 2.5]
+				},
+				"RightLegDown": {
+					"rotation": [3, 0, 0]
+				},
+				"LeftItem": {
+					"rotation": [0, 0, 0]
+				},
+				"RightItem": {
+					"rotation": [0, 0, 0]
+				},
+				"Kbody": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

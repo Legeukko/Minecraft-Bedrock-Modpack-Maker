@@ -1,0 +1,14 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.wolf": {
+      "geometry": "Geometry.default",
+      "materials": [ 
+        { "*": "query.is_tamed ? Material.tamed : Material.normal" }
+      ],
+      "textures": [
+        "query.is_angry ? Texture.angry : (query.has_owner ? Texture.tame : Texture.default)"
+      ]
+    }
+  }
+}

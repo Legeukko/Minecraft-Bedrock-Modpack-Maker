@@ -1,0 +1,141 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.jump.walk": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "!query.item_is_charged &&variable.jump_walk_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"jump.walk"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "query.item_is_charged || !variable.jump_walk_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.jump.sprint": {
+			"states": {
+				"default": {
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"1" : "!query.item_is_charged &&variable.jump_sprint_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"jump.sprint.r"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"2": "query.item_is_charged || !variable.jump_sprint_npa"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"default"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"3": "!query.item_is_charged &&variable.jump_sprint_npa"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"jump.sprint.l"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "query.item_is_charged || !variable.jump_sprint_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.jump.walk.c": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "query.item_is_charged &&variable.jump_walk_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"jump.walk.c"
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!query.item_is_charged ||!variable.jump_walk_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.jump.sprint.c": {
+			"states": {
+				"default": {
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"1" : "query.item_is_charged &&variable.jump_sprint_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"jump.sprint.rc"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"2": "!query.item_is_charged ||!variable.jump_sprint_npa"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"default"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"3": "query.item_is_charged &&variable.jump_sprint_npa"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"jump.sprint.lc"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "!query.item_is_charged ||!variable.jump_sprint_npa"
+						}
+					]
+				}
+			}
+		}
+	}
+}

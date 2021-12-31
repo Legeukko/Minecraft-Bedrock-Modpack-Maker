@@ -1,0 +1,762 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.attack.sword.q1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -95, -5]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -0.4, 0.8]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [22.5, 0, 40],
+						"0.25": [-88.5, 0, 67.5]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, 0]
+					}
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.0417": [195, 0, 0],
+						"0.25": [195, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -8, -2],
+						"0.25": [0, -8, -2]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-12.5, 0, 0],
+						"0.25": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [-25, 0, -52.5],
+						"0.2083": [15, 0, -52.5]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-20, 0, 0],
+						"0.0833": [-57.5, 0, 0],
+						"0.2083": [-22.5, 0, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],			
+					"position": [0, 15, -13]
+				}
+			}
+		},
+		"animation.attack.sword.q2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, -75, -5],
+						"0.1667": [2.5, 15, 0],
+						"0.2": [2.5, 30, 0]
+					},
+					"position": {
+						"0.0": [0, -0.4, 0.8],
+						"0.1667": [0, -0.5, -0.2],
+						"0.2": [0, -0.5, -0.2]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-92.5, 0, 45],
+						"0.0667": [-13.52, -16.37, 109.5],
+						"0.1": [25.97, -11.74, 112],
+						"0.1333": [65.47, -18.37, 116],
+						"0.1667": [85, -5, 120],
+						"0.2": [85, -5, 123]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [0, 0, 0.5],
+						"0.2": [0, 0, 0.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-15, 0, 0],
+						"0.0833": [-50.58, 0, 0],
+						"0.1667": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [15, 0, -52.5],
+						"0.1667": [-20, -15, -52.5],
+						"0.2": [-30, 2.5, -52.5]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-22.5, 0, 0],
+						"0.1667": [-40, 0, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],			
+					"position": [0, 15, -13]
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.2": [87.5, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -8, -2],
+						"0.1667": [0, -3, -7],
+						"0.2": [0, -3, -7]
+					}
+				}
+			}
+		},
+		"animation.attack.sword.q3": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -87, -5]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -0.4, 0.8]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.125": [-26.49, 0, 44.67],
+						"0.25": [-89, -22.5, 70]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, 0]
+					}
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.0417": [195, 0, 0],
+						"0.25": [195, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -8, -2],
+						"0.25": [0, -8, -2]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [-25, 0, -52.5],
+						"0.25": [50, 0, -52.5]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-20, 0, 0],
+						"0.0833": [-57.5, 0, 0],
+						"0.2083": [-22.5, 0, 0],
+						"0.25": [-42.5, 0, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],			
+					"position": [0, 15, -13]
+				}
+			}
+		},
+		"animation.attack.sword.q4": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, -75, -5],
+						"0.1667": [2.5, 15, 0],
+						"0.2": [2.5, 30, 0]
+					},
+					"position": {
+						"0.0": [0, -0.4, 0.8],
+						"0.1667": [0, -0.5, -0.2],
+						"0.2": [0, -0.5, -0.2]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-92.5, 0, 45],
+						"0.1667": [100, 30, 115],
+						"0.2": [100, 30, 110]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [0, 0, 0.5],
+						"0.2": [0, 0, 0.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-15, 0, 0],
+						"0.0833": [-50.58, 0, 0],
+						"0.1667": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [15, 0, -52.5],
+						"0.1667": [-20, -15, -52.5],
+						"0.2": [-30, 2.5, -52.5]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-22.5, 0, 0],
+						"0.1667": [-40, 0, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],			
+					"position": [0, 15, -13]
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.2": [87.5, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -3, -7],
+						"0.2": [0, -3, -7]
+					}
+				}
+			}
+		},
+		"animation.attack.sword.z1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4,
+			"bones": {
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, 0, 30],
+						"0.0417": [0, 155, 0],
+						"0.25": [0, -75, -5]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -0.4, 0.8]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": [72.5, 0, 12.5],
+						"0.0833": [39.52, 0, 100.24],
+						"0.125": [13.48, 0, 103],
+						"0.1667": [-26.49, 0, 63.67],
+						"0.25": [-92.5, 0, 45]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, 0]
+					}
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.01": [195, 0, 0],
+						"0.25": [195, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -8, -27],
+						"0.25": [0, -8, -2]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": [-25, 0, -52.5],
+						"0.2": [15, 0, -52.5]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.02": [-20, 0, 0],
+						"0.1": [-57.5, 0, 0],
+						"0.2": [-22.5, 0, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],
+					"position": [0, 15, -13]
+				}
+			}
+		},
+		"animation.attack.sword.z2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4,
+			"bones": {
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, -255, -35],
+						"0.1667": [2.5, 15, 0],
+						"0.2": [2.5, 20, 0]
+					},
+					"position": {
+						"0.0": [0, -0.4, 0.8],
+						"0.1667": [0, -0.5, -0.2],
+						"0.2": [0, -0.5, -0.2]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-310.5, 0, 17.5],
+						"0.1667": [105, -5, 62.5],
+						"0.2": [120, -5, 62.5]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.1667": [0, 0, 0.5],
+						"0.2": [0, 0, 0.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-130.5, 0, 0],
+						"0.0833": [-50.58, 0, 0],
+						"0.1667": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [200, 0, -52.5],
+						"0.1667": [-20, -15, -52.5],
+						"0.2": [-30, 2.5, -52.5]
+					}
+				},
+				"LeftArmDown": {
+					"rotation": {
+						"0.0": [-22.5, 0, 0],
+						"0.1667": [-40, 0, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],
+					"position": [0, 15, -13]
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.25": [87.5, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -8, -2],
+						"0.20": [0, -8, -2],
+						"0.25": [0, -4, -7]
+					}
+				}
+			}
+		},
+		"animation.attack.sword.z3": {
+			"animation_length": 0.6,
+			"loop": "hold_on_last_frame",	
+			"bones": {
+			   	"kroot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.33": [0, 300, 0],
+						"0.35": [0, 360, 0],
+						"0.350001": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.33": [0, 300, 0],
+						"0.35": [0, 360, 0],
+						"0.350001": [0, 0, 0]
+					}
+				},
+				"kbody": {
+					"rotation": {
+						"0.0": [0, -200, 0],
+						"0.05": [2.5, 15, 0],
+						"0.35": [2.5, 15, 0],
+						"0.350001": [2.5, 15, 0]
+					},
+					"position": {
+						"0.0": [0, -0.5, -0.2]
+					}
+				},
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-280, -5, 62.5],
+						"0.25": [40, -17.5, 72.5],
+						"0.350001": [70, -20, 98.5]
+					},
+					"position": [0, 0, 0.5]
+				},
+				"RightArmDown": {
+					"rotation": [-15, 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": [-20, -15, -52.5]
+				},
+				"LeftArmDown": {
+					"rotation": [-50, 0, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-5, 0, 5]
+				},
+				"RightLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-5, 0, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [5, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],			
+					"position": [0, 15, -13]
+				},
+				"Item": {
+					"rotation": {
+						"0.0": [195, 0, 0],
+						"0.25": [87.5, 0, 0]
+					},
+					"position": {
+						"0.0": [0, -8, -2],
+						"0.25": [0, -4, -7]
+					}
+				}
+			}
+		},
+		"animation.attack.sword.e1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"Kbody": {
+					"rotation": [25, 10, 2.5],
+					"position": [0, -0.5, -0.2]
+				},
+				"RightArmUp": {
+					"rotation": [102.5, -2.5, 62.5],
+					"position": [0, 0, 0.5]
+				},
+				"RightArmDown": {
+					"rotation": [-17.5, 0, 0]
+				},
+				"LeftArmUp": {
+					"rotation": [-20, -15, -52.5]
+				},
+				"LeftArmDown": {
+					"rotation": [-50, 0, 0]
+				},
+				"Leftitem": {
+					"rotation": [90, 0, 90],			
+					"position": [0, 15, -13]
+				},
+				"Item": {
+					"rotation": [87.5, 0, 0],
+					"position": [0, -4, -7]
+				}
+			}
+		},
+		"animation.attack.sword.q1.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.q2.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.q3.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.q4.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.z1.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4,
+			"bones": {
+				"kroot": {
+					"rotation": {
+						"0.0": [0, 12.5, 0],
+						"0.0833": [0, 12.5, 0]
+					},
+					"position": {
+						"0.0": [0, -2, 0],
+						"0.0833": [0, -2, 0]
+					}
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.z2.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.4,
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+					
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.z3.l": {
+			"animation_length": 0.6,
+			"loop": "hold_on_last_frame",	
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+					
+				},
+				"RightLegUp": {
+					"rotation": [-15, 10, 7.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [22.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-20, -5, -5]
+				},
+				"LeftLegDown": {
+					"rotation": [25, 0, 0]
+				}
+			}
+		},
+		"animation.attack.sword.e1.l": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"kroot": {
+					"rotation": [0, 12.5, 0],
+					"position": [0, -2, 0]
+				},
+				"RightLegUp": {
+					"rotation": [-20, 10, 12.5],
+					"position": [0.5, 0, 0]
+				},
+				"RightLegDown": {
+					"rotation": [27.5, 0, 0]
+				},
+				"LeftLegUp": {
+					"rotation": [-25, -5, -10]
+				},
+				"LeftLegDown": {
+					"rotation": [30, 0, 0]
+				}
+			}
+		}
+	}
+}
