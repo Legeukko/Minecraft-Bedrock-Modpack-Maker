@@ -3,6 +3,7 @@ from zipfile import ZipFile
 print("To use this you must seperate the BP and RP packs into new .mcpacks if they are in one pack!")
 profName = input("What is the name of your linux profile? This script needs this for commands, and such.")
 profName = "mcpack-maker"
+
 def strtolst(inp): #Turns str with newlines into list
   out = []
   buff = []
@@ -18,7 +19,7 @@ x = subprocess.check_output(['ls']) #Gets ls output to see what packs were added
 x = x.decode()
 #First lists through and purges all files that do not have mcpack ending
 for i in strtolst(x):
-  if i[-7:] == '.mcpack' or i[-3:] == '.py':
+  if i[-7:] == '.mcpack' or i[-3:] == '.py' or i[-5:] == '.json' or i[-3:] == '.md' or i == 'backup':
     print("Found mcpack file!")
   else:
     print("Purging file", i)
@@ -35,7 +36,7 @@ x = x.decode()
 for i in strtolst(x): #Loops through ls check
   os.chdir("/")
   os.chdir("/home/runner/" + profName)
-  if i not in ['main.py']:
+  if i not in ['main.py', 'RPmanifest.json', 'README.md', 'BPmanifest.json', 'backup']:
     with ZipFile(i, 'r') as zipObj:
       print("Just opeed zip file, getting cwd")
       print(os.getcwd())
@@ -82,9 +83,11 @@ for i in strtolst(x): #Loops through ls check
               break
             else:
               pass
-            
 
-            
-          
-      
-      
+
+#Create RP
+os.chdir("/")
+os.chdir("/home/runner/" + profName)
+os.system('mkdir RP')
+os.system('mv RPmanifest.json RP/manifest.json')
+os.chdir('RP')
