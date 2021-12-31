@@ -63,17 +63,17 @@ for i in strtolst(x): #Loops through ls check
             os.chdir(j)
       print(os.getcwd())
       os.system('ls')
-      x = subprocess.check_output(['ls'])
+      x = subprocess.check_output(['ls']) #Get ls for subpacks
       x = x.decode()
       for g in strtolst(x):
-        if g == "subpacks":
+        if g == "subpacks": #Check for subpack folder
           print("Subpack detected!")
-          os.chdir('subpacks')
+          os.chdir('subpacks') #CD in
           print("subpacks are: \n \n")
           os.system('ls')
           for p in strtolst(subprocess.check_output(['ls']).decode()):
             print(P)
-            if input("Would you like to keep this subpack? Y/N").upper() == 'Y':
+            if input("Would you like to keep this subpack? Y/N").upper() == 'Y': #Ask if they want to keep it
               tokeep = p
               for l in strtolst(subprocess.check_output(['ls']).decode()):
                 if l != p:
