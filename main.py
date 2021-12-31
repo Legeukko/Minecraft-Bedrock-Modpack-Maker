@@ -1,5 +1,8 @@
-import os, subprocess, shutil
+import os, subprocess, shutil, time
 from zipfile import ZipFile
+print("To use this you must seperate the BP and RP packs into new .mcpacks if they are in one pack!")
+profName = input("What is the name of your linux profile? This script needs this for commands, and such.")
+profName = "mcpack-maker"
 def strtolst(inp): #Turns str with newlines into list
   out = []
   buff = []
@@ -30,11 +33,41 @@ for i in strtolst(x):
 x = subprocess.check_output(['ls'])
 x = x.decode()
 for i in strtolst(x): #Loops through ls check
+  os.chdir("/")
+  os.chdir("/home/runner/" + profName)
   if i not in ['main.py']:
     with ZipFile(i, 'r') as zipObj:
+      print("Just opeed zip file, getting cwd")
+      print(os.getcwd())
       i = i.replace(" ", "_") #Replaces whitespace
       i = i[:-7] #Gets rid of .mcpack so we dont get mkdir error
       os.system("cd -") #cds into main dir
-      os.system("mkdir " + i) #makes directory
+      os.system("mkdir a" + i) #makes directory
       print("made dir", i) 
-      zipObj.extractall(i)
+      os.system("ls")
+      zipObj.extractall('a' + i)
+      time.sleep(2) #bigger packs
+      #Check for subpacks
+      os.chdir('a' + i)
+      
+      x = subprocess.check_output(['ls -a'], shell=True)
+      print("Got LS, is", x.decode())
+      x = x.decode()
+      print("Checking for subpacks")
+      if 'manifest.json' not in strtolst(x): #See if program needs to cd up again
+        for j in strtolst(x):
+          print(j)
+          if '.' != j and '..' != j: #Random dots? IDK why 
+            print("manifest not found")
+            print(strtolst(x))
+            os.chdir(j)
+      print(os.getcwd())
+      os.system('ls')
+      x = subprocess.check_output(['ls'])
+      x = x.decode()
+      for g in strtolst(x):
+        if g == "subpacks":
+          print("Subpack detected!")
+          
+      
+      
