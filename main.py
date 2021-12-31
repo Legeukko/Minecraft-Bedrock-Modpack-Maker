@@ -68,6 +68,24 @@ for i in strtolst(x): #Loops through ls check
       for g in strtolst(x):
         if g == "subpacks":
           print("Subpack detected!")
+          os.chdir('subpacks')
+          print("subpacks are: \n \n")
+          os.system('ls')
+          for p in strtolst(subprocess.check_output(['ls']).decode()):
+            print(P)
+            if input("Would you like to keep this subpack? Y/N").upper() == 'Y':
+              tokeep = p
+              for l in strtolst(subprocess.check_output(['ls']).decode()):
+                if l != p:
+                  os.system('rm -rf ' + l)
+              print("Kept!")
+              
+              break
+            else:
+              pass
+            
+              
+            
           
       
       
