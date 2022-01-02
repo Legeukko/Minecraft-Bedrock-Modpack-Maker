@@ -3,7 +3,7 @@ from zipfile import ZipFile
 print("To use this you must seperate the BP and RP packs into new .mcpacks if they are in one pack!")
 profName = input("What is the name of your linux profile? This script needs this for commands, and such.")
 profName = "mcpack-maker"
-
+fileBlacklist = ['main.py', 'RPmanifest.json', 'README.md', 'BPmanifest.json', 'backup']
 def strtolst(inp): #Turns str with newlines into list
   out = []
   buff = []
@@ -36,16 +36,14 @@ x = x.decode()
 for i in strtolst(x): #Loops through ls check
   os.chdir("/")
   os.chdir("/home/runner/" + profName)
-  if i not in ['main.py', 'RPmanifest.json', 'README.md', 'BPmanifest.json', 'backup']:
+  if i not in fileBlacklist:
     with ZipFile(i, 'r') as zipObj:
       print("Just opeed zip file, getting cwd")
-      print(os.getcwd())
       i = i.replace(" ", "_") #Replaces whitespace
       i = i[:-7] #Gets rid of .mcpack so we dont get mkdir error
       os.system("cd -") #cds into main dir
       os.system("mkdir a" + i) #makes directory
       print("made dir", i) 
-      os.system("ls")
       zipObj.extractall('a' + i)
       time.sleep(2) #bigger packs
       #Check for subpacks
@@ -59,7 +57,7 @@ for i in strtolst(x): #Loops through ls check
         for j in strtolst(x):
           print(j)
           if '.' != j and '..' != j: #Random dots? IDK why 
-            print("manifest not found")
+            print("Checking subpacks: Manifest.json not found. CDing up a level...")
             print(strtolst(x))
             os.chdir(j)
       print(os.getcwd())
@@ -90,4 +88,31 @@ os.chdir("/")
 os.chdir("/home/runner/" + profName)
 os.system('mkdir RP')
 os.system('mv RPmanifest.json RP/manifest.json')
-os.chdir('RP')
+countOfLoopedThrough = 0
+for x in strtolst(subprocess.check_output(['ls']).decode()):
+  print(x)
+  if x not in fileBlacklist: #Makes sure file is not readme/this script
+    countOfLoopedThrough += 1
+    os.chdir("/")
+    os.chdir("/home/runner/" + profName)
+    os.chdir(x)
+    g = subprocess.check_output(['ls -a'], shell=True)
+    g = g.decode()
+    print("LINE 99", g)
+    if 'manifest.json' not in strtolst(g): #CHeckng if the program needs to cd up a level
+      print('X + ' + g)
+      for j in strtolst(g):
+        if '.' != j and '..' != j: #Random dots? IDK why 
+          print("Mainifest.json not found in CWD. CDing up 1 level.")
+          os.chdir(j)
+    if countOfLoopedThrough == 1:
+      currentcd = os.getcwd() #need this for later
+      for k in strtolst(subprocess.check_output(['ls']).decode()):
+        os.chdir(currentcd) #CD into the directory after every iteration so we dnt get stuck in one
+        if os.path.isdir(k): #Make sure k is an actual directory so we dont cd into a file
+          print('Moving: ' + k)
+          os.system('mv ' + k + ' /home/runner/' + profName + '/RP') #Finally move files.
+    else:
+      print("LOOP 2: Files already created, we just have to move them. ")
+        
+    
