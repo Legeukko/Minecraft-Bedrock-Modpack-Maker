@@ -1,0 +1,143 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.FIX1": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [90, 0,90],
+					"position": [0, 0,11.5]
+				}
+			}
+		},
+		"animation.player.FIX2": {
+			"loop": true,
+			"bones": {
+				"leftitem": {
+					"rotation": [90, 0,-90],
+					"position": [0, 0,11.5]
+				}
+			}
+		},
+		"animation.player.FIX3": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"rotation": [90, 0,90],
+					"position": [0, 0,11.5]
+				},
+				"litem": {
+					"rotation": [90, 0,-90],
+					"position": [0, 0,11.5]
+				}
+			}
+		},
+		"animation.player.FIX4": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [90, 0,90],
+					"position": [0, -2,-13]
+				}
+			}
+		},
+		"animation.player.FIX5": {
+			"loop": true,
+			"bones": {
+				"item": {
+					"position": [1.5, -37,-2]
+				}
+			}
+		},
+		"animation.player.FIX6": {
+			"loop": true,
+			"bones": {
+				"leftItem": {
+					"scale": [0, 0, 0]
+				}
+			}
+		},
+		"animation.elytra.FIX6": {
+			"loop": true,
+			"bones": {
+				"left_wing": {
+					"position": [0, 0, -2]
+				},
+				"right_wing": {
+					"position": [0, 0, -2]
+				}
+			}
+		},
+		"animation.player.crossbow_equipped" : {
+			"loop" : true,
+			"bones" : {
+				"leftarmup" : {
+					"position" : [ 0.0, 0.0, 0.5 ],
+					"rotation" : [ "-this - 65.0 - (1.0 - variable.item_use_normalized) * 5.0", "-this + (1.0 - variable.item_use_normalized) * 30.0", "-this + 20.0 + (1.0 - variable.item_use_normalized) * 10.0" ]
+				},
+				"rightarmup" : {
+					"rotation" : [ "- 40.0 - this", "- 45.0 - this", "- 2.5 - this" ]
+				}
+			}
+		},
+		"animation.player.crossbow_hold" : {
+			"loop" : true,
+			"bones" : {
+				"leftarmup" : {
+					"rotation" : [ "query.is_swimming ? 0.0 : -85.0 + query.target_x_rotation - query.is_sneaking * 0-this", "query.is_swimming ? 0.0 : 42.0 + math.clamp(query.target_y_rotation, -45.0, 5.0) -this", "query.is_sneaking * 0.0" ]
+				},
+				"rightarmup" : {
+					"rotation" : [ "query.is_swimming ? 0.0 : -65 + query.target_x_rotation - query.is_sneaking * 0.0 -this", "query.is_swimming ? 0.0 : math.clamp(query.target_y_rotation, -60.0, 45.0) -this", 0.0 ]
+				}
+			}
+		},
+		"animation.player.first_person.attack_rotation_item": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [ "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 200.0) * 20.0", "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 200.0) * -42", "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 200.0) * -78" ],
+					"position": ["math.clamp(-15.5 * math.sin(variable.first_person_rotation_factor * variable.attack_time * 112.0), 12, 999.0) * math.sin(variable.first_person_rotation_factor * variable.attack_time * 112.0)", "math.clamp(2 * math.sin(variable.first_person_rotation_factor * variable.attack_time * 112.0), 3, 999.0) * math.sin(variable.first_person_rotation_factor * variable.attack_time * 112.0)", "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 280.0) * -11"]
+				}
+			}
+		},
+		"animation.player.first_person.attack_rotation_item2": {
+			"loop": true,
+			"bones": {
+				"rightarm": {
+					"position": [ "math.clamp(-15.5 * math.sin(variable.first_person_rotation_factor * variable.attack_time * 112.0), -7.0, 999.0) * math.sin(variable.first_person_rotation_factor * variable.attack_time * 112.0)", "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 200.0) * 7.5 - variable.first_person_rotation_factor * variable.attack_time * 15.0 + variable.short_arm_offset_right", "math.sin(variable.first_person_rotation_factor * variable.attack_time * 120.0) * 1.75" ],
+					"rotation": [ "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 280.0) * -60.0", "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 280.0) * 40.0", "math.sin(variable.first_person_rotation_factor * (1.0 - variable.attack_time) * (1.0 - variable.attack_time) * 280.0) * 20.0" ]
+				}
+			}
+		},
+		"animation.player.sleeping" : {
+			"loop" : true,
+			"override_previous_animation" : true,
+			"bones" : {
+				"head" : {
+					"rotation" : [ "30.0 - this", "-this", "-this" ]
+				},
+				"root0" : {
+					"position" : [ "24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)", 0.0, "24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)" ],
+					"rotation" : [ -90.0, "270.0 - query.sleep_rotation - query.body_y_rotation", 0.0 ]
+				}
+			}
+		},
+		"animation.spyglass" : {
+			"loop" : true,
+			"bones" : {
+				"rightarmup" : {
+					"rotation" : [ "math.clamp(query.target_x_rotation - 105 - (variable.is_sneaking ? 15 : 0), -170, 180)", "math.clamp(query.target_y_rotation - 15, -60, 90)", 5.0 ]
+				}
+			}
+		},
+		"animation.player.default": {
+			"loop": true,
+			"bones": {
+				"Kroot": {
+					"position": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

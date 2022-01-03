@@ -1,0 +1,188 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.attack.trident": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && variable.t && query.is_using_item"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.trident1"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"2" : "!variable.is_first_person && !query.is_using_item"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.trident2"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default" : "query.all_animations_finished && (variable.is_first_person || !variable.t || !query.is_using_item)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.trident.wh": {
+			"states": {
+				"default": {
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && !query.is_in_water && !query.is_sprinting && variable.t && query.is_using_item"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"2" : "!variable.is_first_person && !query.is_in_water && !query.is_sprinting && !query.is_using_item && !variable.t"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"3" : "!variable.is_first_person && !query.is_in_water && !query.is_using_item && variable.t"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"attack.trident.wh"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "variable.is_first_person || query.is_in_water || query.is_sprinting || query.is_using_item"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.trident.sh": {
+			"states": {
+				"default": {
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && query.is_on_ground && !query.is_in_water && variable.t && query.is_using_item && !variable.shield_off"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"2" : "!variable.is_first_person && query.is_on_ground && !query.is_in_water && query.is_sprinting && !query.is_using_item && !variable.t && !variable.shield_off"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"3" : "!variable.is_first_person && query.is_on_ground && !query.is_in_water && !query.is_using_item && variable.t && !variable.shield_off"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"attack.trident.sh",
+						"attack.trident.rh"
+					],
+				"blend_transition": 0.5,
+					"transitions": [
+						{
+							"default": "variable.is_first_person ||!query.is_on_ground || query.is_in_water ||!query.is_sprinting || query.is_using_item || variable.shield_off"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.trident.ssh": {
+			"states": {
+				"default": {
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && query.is_on_ground && !query.is_in_water && variable.t && query.is_using_item && variable.shield_off"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"2" : "!variable.is_first_person && query.is_on_ground && !query.is_in_water && query.is_sprinting && !query.is_using_item && !variable.t && variable.shield_off"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.15,
+					"transitions": [
+						{
+							"3" : "!variable.is_first_person && query.is_on_ground && !query.is_in_water && !query.is_using_item && variable.t && variable.shield_off"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"attack.sword.xts0",
+						"attack.sword.xts1",
+						"-0.6"
+					],
+				"blend_transition": 0.5,
+					"transitions": [
+						{
+							"4" : "query.all_animations_finished && !variable.is_first_person && query.is_on_ground && !query.is_in_water && !query.is_using_item && variable.t && variable.shield_off"
+						}
+					]
+				},
+				"4": {
+					"animations": [
+						"default"
+					],
+				"blend_transition": 0.5,
+					"transitions": [
+						{
+							"default": "variable.is_first_person ||!query.is_on_ground || query.is_in_water ||!query.is_sprinting || query.is_using_item || !variable.shield_off"
+						}
+					]
+				}
+			}
+		}
+	}
+}

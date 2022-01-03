@@ -1,0 +1,44 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "minecraft:shield",
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/entity/shield",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.shield",
+        "right": "geometry.shield.r",
+        "left": "geometry.shield.l",
+        "both": "geometry.shield.b"
+      },
+      "animations": {
+        "wield": "controller.animation.shield.wield",
+        "wield_main_hand_first_person": "animation.shield.wield_main_hand_first_person",
+        "wield_off_hand_first_person": "animation.shield.wield_off_hand_first_person",
+        "wield_main_hand_first_person_block": "animation.shield.wield_main_hand_first_person_blocking",
+        "wield_off_hand_first_person_block": "animation.shield.wield_off_hand_first_person_blocking",
+        "wield_third_person": "animation.shield.wield_third_person"
+      },
+      "scripts": {
+        "animate": [
+          "wield"
+        ]
+      },
+      "render_controllers": [
+          {
+              "controller.render.item_default": "c.is_first_person || query.owner_identifier != 'minecraft:player'"
+          },
+          {"controller.render.shield1": "!c.is_first_person && query.owner_identifier == 'minecraft:player'"
+          },
+          {"controller.render.shield2": "!c.is_first_person && query.get_equipped_item_name == 'shield' && query.get_equipped_item_name('off_hand') == 'shield' && query.owner_identifier == 'minecraft:player'"
+          }
+        ]
+    }
+  }
+}

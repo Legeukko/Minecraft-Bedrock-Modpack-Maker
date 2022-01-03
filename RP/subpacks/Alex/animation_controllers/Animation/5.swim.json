@@ -1,0 +1,52 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.player.swim.walk": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && !query.is_swimming && variable.swim_walk_npa"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"swim.walk"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "variable.is_first_person || query.is_swimming || !variable.swim_walk_npa"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.swim.sprint": {
+			"states": {
+				"default": {
+					"blend_transition": 0.4,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && query.is_swimming"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"swimming",
+						"swimming.legs"
+					],
+					"blend_transition": 0.4,
+					"transitions": [
+						{
+							"default": "variable.is_first_person || !query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

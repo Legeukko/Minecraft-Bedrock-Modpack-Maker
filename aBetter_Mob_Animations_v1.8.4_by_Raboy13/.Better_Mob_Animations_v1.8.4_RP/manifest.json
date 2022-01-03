@@ -1,0 +1,36 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "§2Better Mob §6Animations",
+        "description": "§2Better Mob Animations v1.8.4 §7by §7Raboy13 \n§2New Mob Animations: §7Cats and Ocelots!\n§4[Youtube: §6Raboy13 §7||§9SUBSCRIBE]",
+        "uuid": "d3c62154-bb75-4828-89e9-36183acacf9c",
+        "version": [1, 8, 4],
+        "min_engine_version": [1, 17, 0]
+    },
+    "modules": [
+        {
+        "description": "pack.name",
+        "type": "resources",
+        "uuid": "8d5df6c9-84a7-4a18-9e09-ec2d61cc7624",
+        "version": [1, 8, 4]
+        }
+    ],
+    "subpacks": [
+        {
+            "folder_name": "new_squid_model",
+            "name": "New Squid and Glow Squid Model",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "default_squid_model",
+            "name": "Default Squid and Glow Squid Model",
+            "memory_tier": 1
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "Raboy13"
+        ],
+        "url": "https://www.youtube.com/c/Raboy13"
+    }
+}

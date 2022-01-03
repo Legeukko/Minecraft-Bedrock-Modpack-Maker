@@ -1,0 +1,28 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.attack.bow": {
+			"states": {
+				"default": {
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.is_first_person && variable.bow && query.is_using_item"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.bow"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default" : "variable.is_first_person || !variable.bow || !query.is_using_item"
+						}
+					]
+				}
+			}
+		}
+	}
+}

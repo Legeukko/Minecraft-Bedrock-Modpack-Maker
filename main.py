@@ -3,7 +3,7 @@ from zipfile import ZipFile
 print("To use this you must seperate the BP and RP packs into new .mcpacks if they are in one pack!")
 profName = input("What is the name of your linux profile? This script needs this for commands, and such.")
 profName = "mcpack-maker"
-fileBlacklist = ['main.py', 'RPmanifest.json', 'README.md', 'BPmanifest.json', 'backup']
+fileBlacklist = ['main.py', 'RPmanifest.json', 'README.md', 'BPmanifest.json', 'backup', 'RP', 'BP']
 def strtolst(inp): #Turns str with newlines into list
   out = []
   buff = []
@@ -37,6 +37,7 @@ for i in strtolst(x): #Loops through ls check
   os.chdir("/")
   os.chdir("/home/runner/" + profName)
   if i not in fileBlacklist:
+    fileBlacklist.append(i)
     with ZipFile(i, 'r') as zipObj:
       print("Just opeed zip file, getting cwd")
       i = i.replace(" ", "_") #Replaces whitespace
@@ -92,9 +93,10 @@ countOfLoopedThrough = 0
 for x in strtolst(subprocess.check_output(['ls']).decode()):
   print(x)
   if x not in fileBlacklist: #Makes sure file is not readme/this script
-    countOfLoopedThrough += 1
+    countOfLoopedThrough = 1
     os.chdir("/")
     os.chdir("/home/runner/" + profName)
+    os.system('ls')
     os.chdir(x)
     g = subprocess.check_output(['ls -a'], shell=True)
     g = g.decode()
@@ -104,15 +106,27 @@ for x in strtolst(subprocess.check_output(['ls']).decode()):
       for j in strtolst(g):
         if '.' != j and '..' != j: #Random dots? IDK why 
           print("Mainifest.json not found in CWD. CDing up 1 level.")
+          print("Old level was:", os.getcwd())
           os.chdir(j)
     if countOfLoopedThrough == 1:
       currentcd = os.getcwd() #need this for later
       for k in strtolst(subprocess.check_output(['ls']).decode()):
+        print("LINE 114: ", k)
         os.chdir(currentcd) #CD into the directory after every iteration so we dnt get stuck in one
-        if os.path.isdir(k): #Make sure k is an actual directory so we dont cd into a file
-          print('Moving: ' + k)
-          os.system('mv ' + k + ' /home/runner/' + profName + '/RP') #Finally move files.
-    else:
-      print("LOOP 2: Files already created, we just have to move them. ")
+        if os.path.isdir('/home/runner/' + profName + '/RP/' + k):
+          print("Attempted to move files, but they already exist! CDing into directory...")
+          os.chdir(k)
+          print("CDd into directory", k)
+          for f in strtolst(subprocess.check_output(['ls']).decode()):
+            print("Moving:", f)
+            os.system('mv ' + f + ' /home/runner/' + profName + '/RP/' + k)
+          
+          
+        else:
+          if os.path.isdir(k): #Make sure k is an actual directory so we dont cd into a file
+            print('Moving: ' + k)
+            os.system('mv ' + k + ' /home/runner/' + profName + '/RP') #Finally move files.
+      
+        
         
     

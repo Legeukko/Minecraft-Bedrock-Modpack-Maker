@@ -1,0 +1,440 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.attack.sword.sq": {
+			"states": {
+				"default": {
+					"blend_transition": 0.05,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.sword_q && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.sq",
+						"-0.5"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_q || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.attack && variable.sword_q && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.sq",
+						"-0.5"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_q || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.attack && variable.sword_q && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.sz1": {
+			"states": {
+				"default": {
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.sword_z1 && !query.is_sneaking && !query.is_in_water && query.is_sprinting && !variable.shield_off && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.sz1",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z1 || query.is_sneaking || query.is_in_water || !query.is_sprinting || variable.shield_off || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z1 && !query.is_sneaking && !query.is_in_water && query.is_sprinting && !variable.shield_off && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.sz1",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z1 || query.is_sneaking || query.is_in_water || !query.is_sprinting || variable.shield_off || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z1 && !query.is_sneaking && !query.is_in_water && query.is_sprinting && !variable.shield_off && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.sz2": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.sword_z2 && !query.is_sneaking && !query.is_in_water && query.is_sprinting && !variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.sz2",
+						"-0.5"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z2 || query.is_sneaking || query.is_in_water || !query.is_sprinting || variable.shield_off || variable.diamond_arrmor || variable.netherite_arrmor && query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z2 && !query.is_sneaking && !query.is_in_water && query.is_sprinting && !variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.sz2",
+						"-0.5"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z2 || query.is_sneaking || query.is_in_water || !query.is_sprinting || variable.shield_off || variable.diamond_arrmor || variable.netherite_arrmor || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z2 && !query.is_sneaking && !query.is_in_water && query.is_sprinting && !variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.ss": {
+			"states": {
+				"default": {
+					"blend_transition": 0.05,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.sword_z && variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.ss1",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z || variable.sword_q || variable.t || !variable.shield_off || variable.diamond_arrmor || variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z && variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.ss2",
+						"-0.8"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z || variable.sword_q || variable.t || !variable.shield_off || variable.diamond_arrmor || variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"3" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z && variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"3": {
+					"animations": [
+						"attack.sword.ss3",
+						"-1.3"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.sword_z || variable.sword_q || variable.t || !variable.shield_off || variable.diamond_arrmor || variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.sword_z && variable.shield_off && !variable.diamond_arrmor && !variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.xds1": {
+			"states": {
+				"default": {
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.diamond_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.xds0",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.diamond_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.diamond_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.xds0",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.diamond_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.diamond_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.xds2": {
+			"states": {
+				"default": {
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.diamond_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.xds1",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.diamond_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.diamond_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.xds1",
+						"-0.5"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.diamond_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.diamond_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.xns1": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.xns0",
+						"-0.6"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.xns0",
+						"-0.6"
+					],
+					"blend_transition": 0.05,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.xns2": {
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.xns1",
+						"-0.6"
+					],
+					"blend_transition": 0.15,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.xns2",
+						"-0.6"
+					],
+					"blend_transition": 0.05,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.netherite_arrmor || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.netherite_arrmor && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.xts1": {
+			"states": {
+				"default": {
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.t && variable.shield_off && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.xts0",
+						"-0.6"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.t || !variable.shield_off || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.t && variable.shield_off && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.xts0",
+						"-0.6"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.t || !variable.shield_off || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.t && variable.shield_off && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.attack.sword.xts2": {
+			"states": {
+				"default": {
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"1" : "!variable.fr && variable.attack && variable.t && variable.shield_off && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"1": {
+					"animations": [
+						"attack.sword.xts1",
+						"-0.6"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.t || !variable.shield_off || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"2" : "query.any_animation_finished && variable.attack && !variable.fr && variable.t && variable.shield_off && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				},
+				"2": {
+					"animations": [
+						"attack.sword.xts1",
+						"-0.6"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "(query.all_animations_finished && !variable.attack) || variable.fr || !variable.t || !variable.shield_off || query.is_sneaking || query.is_in_water || !query.is_sprinting || !query.is_on_ground"
+						},
+						{
+							"1" : "query.any_animation_finished && variable.attack && !variable.fr && variable.t && variable.shield_off && !query.is_sneaking && !query.is_in_water && query.is_sprinting && query.is_on_ground"
+						}
+					]
+				}
+			}
+		}
+	}
+}

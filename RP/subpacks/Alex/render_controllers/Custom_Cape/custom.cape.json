@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.custom.cape": {
+      "geometry": "Geometry.custom.cape",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.custom.cape" ],
+    "is_hurt_color":{
+        "r":"0.0",
+        "g":"0.0",
+        "b":"0.0",
+        "a":"0.0"
+    },
+    "on_fire_color":{
+        "r":"0.0",
+        "g":"0.0",
+        "b":"0.0",
+        "a":"0.0"
+    },
+      "part_visibility": [
+        { "*": "query.armor_texture_slot(1) != 5" }
+      ]
+    }
+  }
+}

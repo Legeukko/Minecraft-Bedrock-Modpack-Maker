@@ -1,0 +1,18 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.custom.skin.bob": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": ["-2-((math.cos(query.life_time * 100) * 2.7) - 1.5)", 0, 0],
+					"position": [0, -0.5, "((math.cos(query.life_time * 100) * 0.8) * 0.8)"]
+				},
+				"rightArm": {
+					"rotation": ["-15-((math.cos(query.life_time * 105) * 3) + 3)-10+((math.cos(query.life_time * 105) * 5) + 2)", 0, "4+((math.cos(query.life_time * 105) * 3) + 3)"],
+					"position": ["-((math.cos(query.life_time * 105) * 0.17) * 0.17)", "-1-((math.cos(query.life_time * 105) * 0.15) * 0.15)", "0.5-((math.cos(query.life_time * 105) * 0.5) * 0.5)"]
+				}
+			}
+		}
+	}
+}

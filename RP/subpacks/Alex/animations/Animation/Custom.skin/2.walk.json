@@ -1,0 +1,60 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.custom.skin.walk": {
+			"loop": true,
+			"animation_length": 0.7,
+			"bones": {
+			"body": {
+					"rotation": {
+						"0.0": [0, "-15 * math.min(1,query.ground_speed)+query.target_y_rotation * 0.2", "-query.target_y_rotation * 0.1"],
+						"0.1575": ["5 * math.min(1,query.ground_speed)", "query.target_y_rotation * 0.2", "-query.target_y_rotation * 0.1"],
+						"0.35": [0, "15 * math.min(1,query.ground_speed)+query.target_y_rotation * 0.2", "-query.target_y_rotation * 0.1"],
+						"0.525": ["5 * math.min(1,query.ground_speed)", "query.target_y_rotation * 0.2", "-query.target_y_rotation * 0.1"],
+						"0.7": [0, "-15 * math.min(1,query.ground_speed)+query.target_y_rotation * 0.2", "-query.target_y_rotation * 0.1"]
+					}
+				},
+				"RightArm": {
+					"rotation": {
+						"0.0": ["-30 * math.min(1,query.ground_speed)", "-10 * math.min(1,query.ground_speed)", 0],
+						"0.35": ["33 * math.min(1,query.ground_speed)", "3 * math.min(1,query.ground_speed)", 0],
+						"0.7": ["-30 * math.min(1,query.ground_speed)", "-10 * math.min(1,query.ground_speed)", 0]
+					},
+					"position": {
+						"0.0": ["query.target_y_rotation * -0.03", 0, "-0.5 * math.min(1,query.ground_speed)"],
+						"0.35": ["query.target_y_rotation * -0.03", 0, "0.8 * math.min(1,query.ground_speed)"],
+						"0.7": ["query.target_y_rotation * -0.03", 0, "-0.5 * math.min(1,query.ground_speed)"]
+					}
+				},
+				"LeftArm": {
+					"rotation": {
+						"0.0": ["33 * math.min(1,query.ground_speed)", "-3 * math.min(1,query.ground_speed)", 0],
+						"0.35": ["-27 * math.min(1,query.ground_speed)", "10 * math.min(1,query.ground_speed)", 0],
+						"0.7": ["33 * math.min(1,query.ground_speed)", "-3 * math.min(1,query.ground_speed)", 0]
+					},
+				"position": {
+						"0.0": ["query.target_y_rotation * -0.03", 0, "0.8 * math.min(1,query.ground_speed)"],
+						"0.35": ["query.target_y_rotation * -0.03", 0, "-0.5 * math.min(1,query.ground_speed)"],
+						"0.7": ["query.target_y_rotation * -0.03", 0, "0.8 * math.min(1,query.ground_speed)"]
+					}
+				},
+				"rightitem": {
+				    "position": {
+						"0.0": [0, "0.7 * math.min(1,query.ground_speed)", "-0.5 * math.min(1,query.ground_speed)"],
+						"0.35": [0, "0.3 * math.min(1,query.ground_speed)", "-0.5 * math.min(1,query.ground_speed)"],
+						"0.7": [0, "0.7 * math.min(1,query.ground_speed)", "-0.5 * math.min(1,query.ground_speed)"]
+					}
+				},
+				"Root": {
+					"position": {
+						"0.0": [0, "-1.5 * math.min(1,query.ground_speed)", 0],
+						"0.1575": [0, "1 * math.min(1,query.ground_speed)", 0],
+						"0.35": [0, "-1.5  * math.min(1,query.ground_speed)", 0],
+						"0.525": [0, "1  * math.min(1,query.ground_speed)", 0],
+						"0.7": [0, "-1.5 * math.min(1,query.ground_speed)", 0]
+					}
+				}
+			}
+		}
+	}
+}

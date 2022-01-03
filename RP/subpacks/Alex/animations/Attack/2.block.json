@@ -1,0 +1,103 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.attack.blocks.hand1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.21,
+			"bones": {
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-87.5, -2.5, 17.5],
+						"0.1304": [-90.5, -12.5, 17.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-17.5, 0, 0],
+						"0.1304": [-22.5, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [-5, 0, 0],
+						"0.1304": [-7.5, 0, 0]
+					}
+				},
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, 10, 0],
+						"0.1304": ["query.target_x_rotation * 0.3", 10, 0]
+					}
+				},
+				"body": {
+					"rotation": {
+						"0.0": [0, 10, 0],
+						"0.1304": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-105, -2.5, 17.5],
+						"0.1304": [-110, -2.5, 17.5]
+					},
+					"position": {
+						"0.0": [-0.5, -1.6, 0.5],
+						"0.1304": [-0.55, -2, 1.6]
+					}
+				}
+			}
+		},
+		"animation.attack.blocks.hand2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.125,
+			"bones": {
+				"RightArmUp": {
+					"rotation": {
+						"0.0": [-5, -12.5, -7.5],
+						"0.125": [-10, -10, -18.5]
+					}
+				},
+				"RightArmDown": {
+					"rotation": {
+						"0.0": [-15, 0, 0],
+						"0.125": [-15, 0, 0]
+					}
+				},
+				"LeftArmUp": {
+					"rotation": {
+						"0.0": [12.5, 0, 0],
+						"0.125": [17.5, 0, 0]
+					}
+				},
+				"Kbody": {
+					"rotation": {
+						"0.0": [0, -10, 0],
+						"0.125": ["query.target_x_rotation * 0.3", -10, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-18.8, -22.5, -7.5],
+						"0.125": [-22.5, -20, -18.5]
+					},
+					"position": {
+						"0.0": [-0.5, 0.3, 0.5],
+						"0.125": [-0.5, 0.2, 0.5]
+					}
+				}
+			}
+		},
+		"animation.attack.blocks.legs": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.21,
+			"bones": {
+				"RightLegUp": {
+					"rotation": [0, 0, 5]
+				},
+				"LeftLegUp": {
+					"rotation": [0, 0, -5]
+				}
+			}
+		}
+	}
+}
