@@ -88,7 +88,7 @@ for i in strtolst(x): #Loops through ls check
 os.chdir("/")
 os.chdir("/home/runner/" + profName)
 os.system('mkdir RP')
-os.system('mv RPmanifest.json RP/manifest.json')
+os.system('cp RPmanifest.json RP/manifest.json')
 countOfLoopedThrough = 0
 for x in strtolst(subprocess.check_output(['ls']).decode()):
   print(x)

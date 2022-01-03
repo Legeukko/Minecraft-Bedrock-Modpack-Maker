@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "RP",
+        "description": "RP",
+        "uuid": "f21c18c8-0f2c-4ec0-aff6-3fe1a4a8d98a",
+        "version": [1, 8, 4],
+        "min_engine_version": [1, 17, 0]
+    },
+    "modules": [
+        {
+        "description": "pack.name",
+        "type": "resources",
+        "uuid": "68131048-14d0-4543-b636-285afd77d524",
+        "version": [1, 8, 4]
+        }
+    ]
+}
