@@ -46,7 +46,7 @@ for i in strtolst(x): #Loops through ls check
       os.system("mkdir a" + i) #makes directory
       print("made dir", i) 
       zipObj.extractall('a' + i)
-      time.sleep(2) #bigger packs
+     #bigger packs
       #Check for subpacks
       os.chdir('a' + i)
       
@@ -61,6 +61,7 @@ for i in strtolst(x): #Loops through ls check
             print("Checking subpacks: Manifest.json not found. CDing up a level...")
             print(strtolst(x))
             os.chdir(j)
+      tokeep3 = os.getcwd()
       print(os.getcwd())
       os.system('ls')
       x = subprocess.check_output(['ls']) #Get ls for subpacks
@@ -74,11 +75,28 @@ for i in strtolst(x): #Loops through ls check
           for p in strtolst(subprocess.check_output(['ls']).decode()):
             print(p)
             if input("Would you like to keep this subpack? Y/N").upper() == 'Y': #Ask if they want to keep it
-              tokeep = p
+              tokeep = p # Not sure why this is here but im too lazy to change it
               for l in strtolst(subprocess.check_output(['ls']).decode()):
                 if l != p:
-                  os.system('rm -rf ' + l)
+                  os.system('rm -rf ' + l) #delete subpack if the user answered y
               print("Kept!")
+              os.chdir(tokeep)
+              tokeep2 = os.getcwd()
+              print(tokeep2)
+              
+              for b in strtolst(subprocess.check_output(['ls']).decode()): #Go into subpack
+                os.chdir(tokeep2)
+                for h in strtolst(subprocess.check_output(['ls']).decode()): #Loop through files and CD into them
+                  
+                  os.chdir(tokeep2)
+                  if os.path.isdir(h):
+                    print("LINE 89")
+                    os.chdir(h)
+                    for a in strtolst(subprocess.check_output(['ls']).decode()): #Loop through files and CD into them again
+                      print("CDd into", h)
+                      
+                      os.system('mv ' + a  + ' ' + tokeep3 + '/' + b) #Finnaly move them with a tokeep variable that stores the path of the current pack directory
+                  print(h)
               break
             else:
               pass
