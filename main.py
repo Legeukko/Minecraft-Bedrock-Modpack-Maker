@@ -1,4 +1,4 @@
-import os, subprocess, shutil, time
+import os, subprocess, shutil
 from zipfile import ZipFile
 print("To use this you must seperate the BP and RP packs into new .mcpacks if they are in one pack!")
 profName = input("What is the name of your linux profile? This script needs this for commands, and such.")
