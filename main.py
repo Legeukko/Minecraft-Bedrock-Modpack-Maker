@@ -1,4 +1,4 @@
-import os, subprocess, shutil
+import os, subprocess, shutil, json
 from zipfile import ZipFile
 print("To use this you must seperate the BP and RP packs into new .mcpacks if they are in one pack!")
 profName = input("What is the name of your linux profile? This script needs this for commands, and such.")
@@ -107,6 +107,8 @@ os.chdir("/")
 os.chdir("/home/runner/" + profName)
 os.system('mkdir RP')
 os.system('cp RPmanifest.json RP/manifest.json')
+os.system('mkdir BP')
+os.system('cp BPmanifest.json BP/manifest.json')
 countOfLoopedThrough = 0
 for x in strtolst(subprocess.check_output(['ls']).decode()):
   print(x)
@@ -126,25 +128,73 @@ for x in strtolst(subprocess.check_output(['ls']).decode()):
           print("Mainifest.json not found in CWD. CDing up 1 level.")
           print("Old level was:", os.getcwd())
           os.chdir(j)
-    if countOfLoopedThrough == 1:
-      currentcd = os.getcwd() #need this for later
-      for k in strtolst(subprocess.check_output(['ls']).decode()):
-        print("LINE 114: ", k)
-        os.chdir(currentcd) #CD into the directory after every iteration so we dnt get stuck in one
-        if os.path.isdir('/home/runner/' + profName + '/RP/' + k):
-          print("Attempted to move files, but they already exist! CDing into directory...")
-          os.chdir(k)
-          print("CDd into directory", k)
-          for f in strtolst(subprocess.check_output(['ls']).decode()):
-            print("Moving:", f)
-            os.system('mv ' + f + ' /home/runner/' + profName + '/RP/' + k)
-          
-          
-        else:
-          if os.path.isdir(k): #Make sure k is an actual directory so we dont cd into a file
-            print('Moving: ' + k)
-            os.system('mv ' + k + ' /home/runner/' + profName + '/RP') #Finally move files.
+    RP = False
+    with open('manifest.json') as f:
+      data = json.load(f)
+      
+      temp = data["modules"]
+      temp = temp[0]
+      print(data)
+      print(temp)
+      if temp['type'] == 'resources':
+        RP = True
+
+        
+    #RP______________________________________________
+    if RP == True:
+      if countOfLoopedThrough == 1:
+        currentcd = os.getcwd() #need this for later
+        for k in strtolst(subprocess.check_output(['ls']).decode()):
+          print("LINE 114: ", k)
+          os.chdir(currentcd) #CD into the directory after every iteration so we dnt get stuck in one
+          if os.path.isdir('/home/runner/' + profName + '/RP/' + k):
+            print("Attempted to move files, but they already exist! CDing into directory...")
+            os.chdir(k)
+            print("CDd into directory", k)
+            for f in strtolst(subprocess.check_output(['ls']).decode()):
+              print("Moving:", f)
+              if os.path.isfile('/home/runner/' + profName + '/BP/' + k):
+                if input("File", f, "already exists! Would you like to ovverwrite it? The current that will overwrite the old one is:", x, "Y/N").upper() == "Y":
+                  print("Overwitten")
+                  os.system('mv ' + f + ' /home/runner/' + profName + '/RP/' + k)
+                else:
+                  print("Did not overwrite file")
+              else:
+                os.system('mv ' + f + ' /home/runner/' + profName + '/RP/' + k)
+            
+            
+          else:
+            if os.path.isdir(k): #Make sure k is an actual directory so we dont cd into a file
+              print('Moving: ' + k)
+              os.system('mv ' + k + ' /home/runner/' + profName + '/RP') #Finally move files.
+    #BP_________________________________________________
+
+
+    else:
+        currentcd = os.getcwd() #need this for later
+        for k in strtolst(subprocess.check_output(['ls']).decode()):
+          print("LINE 114: ", k)
+          os.chdir(currentcd) #CD into the directory after every iteration so we dnt get stuck in one
+          if os.path.isdir('/home/runner/' + profName + '/BP/' + k):
+            print("Attempted to move files, but they already exist! CDing into directory...")
+            os.chdir(k)
+            print("CDd into directory", k)
+            for f in strtolst(subprocess.check_output(['ls']).decode()):
+              print("Moving:", f)
+              if os.path.isfile('/home/runner/' + profName + '/BP/' + k):
+                if input("File", f, "already exists! Would you like to ovverwrite it? The current that will overwrite the old one is:", x, "Y/N").upper() == "Y":
+                  print("Overwitten")
+                  os.system('mv ' + f + ' /home/runner/' + profName + '/BP/' + k)
+                else:
+                  print("Did not overwrite file")
+              else:
+                os.system('mv ' + f + ' /home/runner/' + profName + '/BP/' + k)
+            
+            
+          else:
+            if os.path.isdir(k): #Make sure k is an actual directory so we dont cd into a file
+              print('Moving: ' + k)
+              os.system('mv ' + k + ' /home/runner/' + profName + '/BP') #Finally move files.
       
         
         
-    
