@@ -1,0 +1,66 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.cow.general": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "running": "query.is_scared"
+                        },
+                        {
+                            "walking": "query.modified_move_speed"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "walking": {
+                    "animations": [{"walk": "query.modified_move_speed"}],
+                    "transitions": [
+                        {
+                            "running": "query.is_scared"
+                        },
+                        {
+                            "default": "!query.ground_speed"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                },
+                "running": {
+                    "animations": [
+                        {"run": "query.modified_move_speed"}
+                    ],
+                    "transitions": [
+                        {
+                            "walking": "!query.is_avoiding_mobs && query.modified_move_speed"
+                        },
+                        {
+                            "default": "!query.ground_speed && !query.is_avoiding_mobs"
+                        }
+                    ],
+                    "blend_transition": 0.3
+                }
+            }
+        },
+        "controller.animation.cow.eyelids":{
+            "initial_state": "default",
+            "states": {
+                "default":{
+                    "animations": ["blink"],
+                    "transitions": [
+                        {
+                            "dead": "query.health == 0"
+                        }
+                    ]
+                },
+                "dead":{
+                    "transitions": [
+                        {
+                            "default": "query.health > 0"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

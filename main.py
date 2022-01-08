@@ -14,12 +14,23 @@ def strtolst(inp): #Turns str with newlines into list
     else:
         buff.append(c)
   return out
-  
+print('a')
+
+
+g = 0
+for root, dirs, files in os.walk('aBetter_Mob_Animations_v1.8.4_by_Raboy13'):
+  for name in files:
+
+    print(root)
+    roots = root.split('/')
+    print(roots[-1])
+    
+    
 x = subprocess.check_output(['ls']) #Gets ls output to see what packs were added
 x = x.decode()
 #First lists through and purges all files that do not have mcpack ending
 for i in strtolst(x):
-  if i[-7:] == '.mcpack' or i[-3:] == '.py' or i[-5:] == '.json' or i[-3:] == '.md' or i == 'backup':
+  if i[-7:] == '.mcpack' or i[-3:] == '.py' or i[-5:] == '.json' or i[-3:] == '.md' or i == 'backup' or i[-7:] == 'mcaddon':
     print("Found mcpack file!")
   else:
     print("Purging file", i)
@@ -38,6 +49,7 @@ for i in strtolst(x): #Loops through ls check
   os.chdir("/home/runner/" + profName)
   if i not in fileBlacklist:
     fileBlacklist.append(i)
+      
     with ZipFile(i, 'r') as zipObj:
       print("Just opeed zip file, getting cwd")
       i = i.replace(" ", "_") #Replaces whitespace
@@ -50,22 +62,38 @@ for i in strtolst(x): #Loops through ls check
       #Check for subpacks
       os.chdir('a' + i)
       
+      cwd = os.getcwd()
       x = subprocess.check_output(['ls -a'], shell=True)
       print("Got LS, is", x.decode())
       x = x.decode()
       print("Checking for subpacks")
+      
       if 'manifest.json' not in strtolst(x): #See if program needs to cd up again
+        count = 0
         for j in strtolst(x):
+          
+          os.chdir(cwd)
+          
           print(j)
-          if '.' != j and '..' != j: #Random dots? IDK why 
+          
+          if '.' != j and '..' != j: #Random dots? IDK why       
+            if os.path.isdir(j):
+              count += 1
+              tmp = j
             print("Checking subpacks: Manifest.json not found. CDing up a level...")
             print(strtolst(x))
+            print(os.getcwd())
             os.chdir(j)
+            
+        if count == 2:
+          os.system('mv ' + tmp + ' /home/runner/' + profName)
+          
       tokeep3 = os.getcwd()
       print(os.getcwd())
       os.system('ls')
       x = subprocess.check_output(['ls']) #Get ls for subpacks
       x = x.decode()
+      
       for g in strtolst(x):
         if g == "subpacks": #Check for subpack folder
           print("Subpack detected!")
@@ -121,9 +149,11 @@ for x in strtolst(subprocess.check_output(['ls']).decode()):
     g = subprocess.check_output(['ls -a'], shell=True)
     g = g.decode()
     print("LINE 99", g)
+    cwd = os.getcwd()
     if 'manifest.json' not in strtolst(g): #CHeckng if the program needs to cd up a level
       print('X + ' + g)
       for j in strtolst(g):
+        os.chdir(cwd)
         if '.' != j and '..' != j: #Random dots? IDK why 
           print("Mainifest.json not found in CWD. CDing up 1 level.")
           print("Old level was:", os.getcwd())
@@ -171,9 +201,10 @@ for x in strtolst(subprocess.check_output(['ls']).decode()):
 
 
     else:
+        print("BP script running")
         currentcd = os.getcwd() #need this for later
         for k in strtolst(subprocess.check_output(['ls']).decode()):
-          print("LINE 114: ", k)
+          print("LINE 190: ", k)
           os.chdir(currentcd) #CD into the directory after every iteration so we dnt get stuck in one
           if os.path.isdir('/home/runner/' + profName + '/BP/' + k):
             print("Attempted to move files, but they already exist! CDing into directory...")
@@ -196,5 +227,22 @@ for x in strtolst(subprocess.check_output(['ls']).decode()):
               print('Moving: ' + k)
               os.system('mv ' + k + ' /home/runner/' + profName + '/BP') #Finally move files.
       
-        
-        
+from os.path import basename
+os.chdir('/home/runner/' + profName)
+with ZipFile('BP.mcpack', 'w') as zipObj:
+  for folderName, subfolders, filenames in os.walk('BP'):
+       for filename in filenames:
+          #create complete filepath of file in directory
+          filePath = os.path.join(folderName, filename)
+          # Add file to zip
+          zipObj.write(filePath, basename(filePath))
+
+
+os.chdir('/home/runner/' + profName)
+with ZipFile('RP.mcpack', 'w') as zipObj:
+  for folderName, subfolders, filenames in os.walk('RP'):
+       for filename in filenames:
+          #create complete filepath of file in directory
+          filePath = os.path.join(folderName, filename)
+          # Add file to zip
+          zipObj.write(filePath, basename(filePath))
